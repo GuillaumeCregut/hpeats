@@ -1,4 +1,25 @@
+.MenuFilters{
+    height: 12%;
+}
+
+.logo-title-cart{
+    display: flex;
+    margin: 5px;
+}
+.logo-cart {
+    display: flex;
+    margin-left: auto;
+}
+
+.logo-title-cart h1{
+    margin-left: auto;
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+
 .logo-menu {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
