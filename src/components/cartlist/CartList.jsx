@@ -3,34 +3,32 @@ import CartItem from '../cartitem/CartItem';
 
 const CartList = (props) => {
     //Props contient le tableau de commande
-    const arrayCart = props.cart;
-    console.log(props);
+    const { cart, addToCart, removeFromCart } = props;
     return (
         <div>
-            <table>
-                <thead>
-                    <tr>
-                        <td></td>
-                        <td>Nom</td>
-                        <td>Prix unitaire</td>
-                        <td>Quantité</td>
-                        <td>Poids</td>
-                        <td>Total</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {arrayCart.map((item) =>
-                        <CartItem
-                            key={item.id}
-                            name={item.name}
-                            image={item.image}
-                            price={item.price}
-                            quantity={item.quantity}
-                            weight={item.weight}
-                        />)}
+            {cart.length === 0 ? <div>Le panier est vide</div> :
+                (<table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>Nom</td>
+                            <td>Prix unitaire</td>
+                            <td>Quantité</td>
+                            <td>Poids</td>
+                            <td>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {cart.map((item) =>
+                            <CartItem
+                                key={item.id}
+                                item={item}
+                                addToCart={addToCart}
+                                removeFromCart={removeFromCart}
+                            />)}
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>)}
         </div>
     )
 }
