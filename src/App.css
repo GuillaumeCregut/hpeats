@@ -2,3 +2,7 @@
     margin: 0;
     padding: 0;
   }
+
+  body {
+    background: linear-gradient(-180deg, #e6cc7c, transparent) no-repeat;
+  }

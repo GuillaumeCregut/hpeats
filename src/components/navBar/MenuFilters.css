@@ -1,5 +1,6 @@
 .MenuFilters{
     height: 12%;
+    
 }
 
 .logo-title-cart{
@@ -22,4 +23,14 @@
     display: flex;
     justify-content: center;
     margin-top: 50px;
+}
+
+@media screen and (max-width: 426px) {
+    .logo-title-cart h1{
+        display: none;
+    }
+
+    .logo-hpeat{
+      margin-left: 40%;
+    }
 }

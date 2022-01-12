@@ -3,11 +3,18 @@
 }
 
 .Logo img {
-    width: 100px;
+    width: 125px;
     height: auto;
-    
 }
 
 .Logo p {
     font-size: 200%;
+}
+
+@media screen and (max-width: 426px) {
+    .Logo img {
+        width: 90px;
+        
+    }
+
 }

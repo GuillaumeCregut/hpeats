@@ -16,17 +16,19 @@ function MenuFilters() {
         <div className='MenuFilters'>
 
             <div className='logo-title-cart'>
+
                 <div className='logo-hpeat'>
                     <Logo />
                 </div>
-                    
-                    <h1>Bienvenue à HPEats !</h1>
-                    
 
+                <h1>Bienvenue à HPEats !</h1>
+                 
                 <div className='logo-cart'>
                 <CardIcon logo={LogoCart} title = "Panier"/>
                 </div>
+                
             </div>
+
             <div className='logo-menu'>
                 <CardIcon logo={LogoVegan} title = "Vegan"/>
                 <CardIcon logo={Logoflexi} title = "Flexi"/>
