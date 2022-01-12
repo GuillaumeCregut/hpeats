@@ -1,5 +1,5 @@
 import React from 'react'
-import CardIcone from './CardIcone'
+import CardIcon from './CardIcon'
 import "./MenuFilters.css" 
 
 import LogoVegan from '../../assets/img/LogoVegan.png'
@@ -14,11 +14,11 @@ function MenuFilters() {
     return (
         <div className='Menufilters'>
             <div className='logo-menu'>
-                <CardIcone logo={LogoVegan} title = "Vegan"/>
-                <CardIcone logo={Logoflexi} title = "Flexi"/>
-                <CardIcone logo={LogoTradi} title = "Tradi"/>
-                <CardIcone logo={LogoPotion} title = "Potion"/>
-                <CardIcone logo={LogoEtrange} title = "Etrange"/>
+                <CardIcon logo={LogoVegan} title = "Vegan"/>
+                <CardIcon logo={Logoflexi} title = "Flexi"/>
+                <CardIcon logo={LogoTradi} title = "Tradi"/>
+                <CardIcon logo={LogoPotion} title = "Potion"/>
+                <CardIcon logo={LogoEtrange} title = "Etrange"/>
             </div>
         </div>
     )

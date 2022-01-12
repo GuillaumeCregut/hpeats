@@ -1,12 +1,12 @@
 import React from 'react'
-import "./CardIcone.css"
-function CardIcone({logo, title}) {
+import "./CardIcon.css"
+function CardIcon({logo, title}) {
     return (
-        <div className='CardIcone'>
+        <div className='CardIcon'>
             <img src={logo} alt="logo" />
             <p>{title}</p>
         </div>
     )
 }
 
-export default CardIcone ;
+export default CardIcon ;
