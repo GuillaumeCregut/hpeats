@@ -1,0 +1,14 @@
+.Logo {
+    text-align: center;
+}
+
+.Logo img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 0px;
+}
+
+.Logo p {
+    font-size: 50px;
+    margin-top: 0px;
+}
