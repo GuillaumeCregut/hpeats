@@ -26,15 +26,15 @@ function MenuFilters() {
                 <div className='logo-cart'>
                 <CardIcon logo={LogoCart} title = "Panier"/>
                 </div>
-                
+
             </div>
 
             <div className='logo-menu'>
-                <CardIcon logo={LogoVegan} title = "Vegan"/>
-                <CardIcon logo={Logoflexi} title = "Flexi"/>
-                <CardIcon logo={LogoTradi} title = "Tradi"/>
-                <CardIcon logo={LogoPotion} title = "Potion"/>
-                <CardIcon logo={LogoEtrange} title = "Etrange"/>
+                <CardIcon logo={LogoVegan} title = "Vegan" />
+                <CardIcon logo={Logoflexi} title = "Flexi" />
+                <CardIcon logo={LogoTradi} title = "Tradi" />
+                <CardIcon logo={LogoPotion} title = "Potion" />
+                <CardIcon logo={LogoEtrange} title = "Etrange" />
             </div>
             
         </div>

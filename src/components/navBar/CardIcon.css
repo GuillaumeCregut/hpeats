@@ -9,12 +9,15 @@
 
 .CardIcon p {
     font-size: 25px;
-
 }
 
 @media screen and (max-width: 426px) {
     .CardIcon img {
-        width: 50PX;
+        width: 45PX;
+        }
+
+        .CardIcon p {
+            font-size: 20px;
         }
 }
 

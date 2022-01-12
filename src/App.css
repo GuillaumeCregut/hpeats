@@ -6,3 +6,8 @@
   body {
     background: linear-gradient(-180deg, #e6cc7c, transparent) no-repeat;
   }
+
+  .App{
+    position: relative;
+    height: 600px;
+  }

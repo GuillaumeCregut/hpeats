@@ -33,4 +33,18 @@
     .logo-hpeat{
       margin-left: 40%;
     }
+
+    .logo-menu{
+        position: fixed;
+        bottom: 0;
+        margin-left: 35px;
+        padding: 5px;
+        border: solid gray;
+        border-radius: 15px;
+        box-shadow: inset -1px 3px 8px 5px #b5b7b9,
+                    2px 5px 16px 0px #000000,
+                    0px 0px 50px 10px rgba(214,214,214,0.29); ;
+    }
+
+    
 }
