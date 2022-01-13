@@ -1,0 +1,13 @@
+.CardIcon {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.CardIcon img {
+width: 100px;
+}
+
+.CardIcon p {
+    font-size: 25px;
+
+}
