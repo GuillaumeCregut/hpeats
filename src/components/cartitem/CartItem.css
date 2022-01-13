@@ -2,13 +2,14 @@
 {
     padding: 3px 15px;
     text-align: center;
-    /* border : solid 1px black; */
     vertical-align: baseline;
     font-size: 1.3rem;
 }
+
 .MoneyIcon{
     padding-left: 2px;
 }
+
 .CartListBtn
 {
     border-radius: 20px;
@@ -18,14 +19,17 @@
     text-align: center;
 
 }
+
 .CartListBenMin{
-background-color: red;
-margin-right: 5px;
+    background-color: red;
+    margin-right: 5px;
 }
+
 .CartListBeAdd{
-background-color: green;
-margin-left: 5px;
+    background-color: green;
+    margin-left: 5px;
 }
+
 .CartImageItem
 {
     border : 1px solid black;

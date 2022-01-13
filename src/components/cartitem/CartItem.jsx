@@ -1,10 +1,12 @@
 import React from 'react';
 import './CartItem.css';
 import './CartItem.css';
+
 const CartItem = (props) => {
     const { item, addToCart, removeFromCart } = props;
     let price = parseInt(item.price).toFixed(2);
     let quantity = parseInt(item.qty);
+
     return (
         <tr className="CartRow">
             <td className="CartCell"><img src="{item.image}" alt={item.name} className="CartImageItem" /></td>
