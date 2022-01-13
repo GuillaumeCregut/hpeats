@@ -1,10 +1,9 @@
-
 .main-container{
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
+
 .mainImg{
     width : 300px;
     height: auto;
