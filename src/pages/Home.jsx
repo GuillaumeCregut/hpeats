@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import MealCardsLists from '../components/meals/MealCardsLists';
 
 
@@ -10,6 +11,15 @@ const Home = () => {
             
              <MealCardsLists />
             
+=======
+import MenuFilters from '../components/navbar/MenuFilters'
+
+
+function Home() {
+    return (
+        <div>
+            <MenuFilters />
+>>>>>>> dev
         </div>
     )
 }

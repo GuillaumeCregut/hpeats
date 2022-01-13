@@ -1,0 +1,25 @@
+.CardIcon {
+    text-align: center;
+    margin-right: 20px;
+    
+}
+
+.CardIcon img {
+    width: 100PX;
+}
+
+.CardIcon p {
+    font-size: 25px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 426px) {
+    .CardIcon img {
+        width: 45PX;
+        }
+
+        .CardIcon p {
+            font-size: 20px;
+        }
+}
+
