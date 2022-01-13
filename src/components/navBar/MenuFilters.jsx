@@ -10,23 +10,17 @@ import LogoEtrange from '../../assets/img/LogoEtrange.png';
 import LogoCart from '../../assets/img/LogoCart.png';
 import Logo from '../Logo.jsx'
 
-
 function MenuFilters() {
     return (
         <div className='MenuFilters'>
-
             <div className='logo-title-cart'>
-
                 <div className='logo-hpeat'>
                     <Logo />
                 </div>
-
-                <h1>Bienvenue à HPEats !</h1>
-                 
+                <h1>Bienvenue à HPEats !</h1>            
                 <div className='logo-cart'>
                 <CardIcon logo={LogoCart} title = "Panier"/>
                 </div>
-
             </div>
 
             <div className='logo-menu'>
@@ -35,8 +29,7 @@ function MenuFilters() {
                 <CardIcon logo={LogoTradi} title = "Tradi" />
                 <CardIcon logo={LogoPotion} title = "Potion" />
                 <CardIcon logo={LogoEtrange} title = "Etrange" />
-            </div>
-            
+            </div>   
         </div>
     )
 }

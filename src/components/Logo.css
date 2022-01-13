@@ -1,20 +1,17 @@
 .Logo {
     text-align: center;
 }
-
 .Logo img {
     width: 125px;
     height: auto;
+    transform: rotate(14deg);
 }
-
 .Logo p {
     font-size: 200%;
 }
 
 @media screen and (max-width: 426px) {
     .Logo img {
-        width: 90px;
-        
+        width: 90px;   
     }
-
 }
