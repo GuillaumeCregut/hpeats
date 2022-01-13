@@ -1,11 +1,13 @@
 .Logo {
     text-align: center;
 }
+
 .Logo img {
     width: 125px;
     height: auto;
     transform: rotate(14deg);
 }
+
 .Logo p {
     font-size: 200%;
 }
