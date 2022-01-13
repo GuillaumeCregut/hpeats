@@ -10,7 +10,7 @@ import LogoEtrange from '../../assets/img/LogoEtrange.png';
 import LogoCart from '../../assets/img/LogoCart.png';
 import Logo from '../Logo.jsx'
 
-function MenuFilters() {
+function MenuFilters({filterFunction}) {
     return (
         <div className='MenuFilters'>
             <div className='logo-title-cart'>
@@ -24,11 +24,11 @@ function MenuFilters() {
             </div>
 
             <div className='logo-menu'>
-                <CardIcon logo={LogoVegan} title = "Vegan" />
-                <CardIcon logo={Logoflexi} title = "Flexi" />
-                <CardIcon logo={LogoTradi} title = "Tradi" />
-                <CardIcon logo={LogoPotion} title = "Potion" />
-                <CardIcon logo={LogoEtrange} title = "Etrange" />
+                <CardIcon logo={LogoVegan} title = "Vegan" filter={filterFunction} kind='vegan'/>
+                <CardIcon logo={Logoflexi} title = "Flexi"  filter={filterFunction} kind='flexi'/>
+                <CardIcon logo={LogoTradi} title = "Tradi" filter={filterFunction} kind='tradi' />
+                <CardIcon logo={LogoPotion} title = "Potion" filter={filterFunction} kind='potions' />
+                <CardIcon logo={LogoEtrange} title = "Etrange"  filter={filterFunction} kind='strange'/>
             </div>   
         </div>
     )
