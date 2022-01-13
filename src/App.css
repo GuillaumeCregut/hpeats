@@ -9,11 +9,11 @@
     padding: 0;
   }
   
-  body {
-    background: linear-gradient(-180deg, #e6cc7c, transparent) no-repeat;
-  }
+body {
+  background: linear-gradient(-180deg, #e6cc7c, transparent) no-repeat;
+}
   
-  .App{
+.App{
     position: relative;
     height: 600px;
-  }
+}

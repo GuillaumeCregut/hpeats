@@ -10,10 +10,10 @@ const MealCardContainer = ({mealsCards, filterTypes}) => {
             {mealsCards
                 .filter((item)=> item.type === (filterTypes)
                 )
-            .map((mealCard, index) =>(
-                <div key={index}>                  
+                .map((mealCard, index) =>(
+                    <div key={index}>                  
                     <Starters mealCard = {mealCard} />                   
-                </div> )
+                    </div> )
                 )}
         </div>
     )
