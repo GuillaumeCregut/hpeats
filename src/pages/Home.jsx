@@ -1,13 +1,16 @@
 import React from 'react'
+import MealCardsLists from '../components/meals/MealCardsLists';
 import MenuFilters from '../components/navbar/MenuFilters'
 
-
-function Home() {
+const Home = () => {
+     
     return (
-        <div>
-            <MenuFilters />
+        <div className='home'>
+            <MenuFilters />            
+            <MealCardsLists />
         </div>
     )
+            
 }
 
 export default Home
