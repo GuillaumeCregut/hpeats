@@ -1,15 +1,15 @@
 import React from 'react'
 import CartItem from '../cartitem/CartItem';
-
+import './CartList.css';
 const CartList = (props) => {
     //Props contient le tableau de commande
     const { cart, addToCart, removeFromCart } = props;
     return (
         <div>
             {cart.length === 0 ? <div>Le panier est vide</div> :
-                (<table>
+                (<table className="CartTable">
                     <thead>
-                        <tr>
+                        <tr className="CartTableHead">
                             <td></td>
                             <td>Nom</td>
                             <td>Prix unitaire</td>
