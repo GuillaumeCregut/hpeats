@@ -10,6 +10,10 @@
     display: flex;
     margin-left: auto;
 }
+.cart{
+    text-decoration: none;
+    color: black;
+}
 .logo-title-cart h1{
     margin-left: auto;
     margin-top: 40px;
