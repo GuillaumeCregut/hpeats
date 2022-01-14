@@ -1,0 +1,17 @@
+.Footer {
+    text-align: center;
+    background-color: aquamarine;
+    height: 200px;
+    width: 100vw;
+}
+.container_linkedin{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-icone {
+    text-decoration: none;
+    
+
+}
+
