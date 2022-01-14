@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-import React from 'react';
-import MenuFilters from '../components/navbar/MenuFilters';
-import {useState} from 'react';
-
-function Home() {
-    const [filterKind, setFilterKind] = useState('')
-    return (
-        <div>
-            <MenuFilters filterFunction= {setFilterKind} />
-=======
 import React from 'react'
 import MealCardsLists from '../components/meals/MealCardsLists';
 import MenuFilters from '../components/navbar/MenuFilters'
 
 const Home = () => {
-     
+     const [filterKind, setFilterKind] = useState('')
     return (
         <div className='home'>
-            <MenuFilters />            
+            <MenuFilters filterFunction= {setFilterKind}/>            
             <MealCardsLists />
->>>>>>> dev
         </div>
     )
             
