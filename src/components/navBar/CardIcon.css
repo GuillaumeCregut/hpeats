@@ -1,6 +1,7 @@
 .CardIcon {
     text-align: center;
     margin-right: 20px;
+    
 }
 
 .CardIcon img {
@@ -9,6 +10,7 @@
 
 .CardIcon p {
     font-size: 25px;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 426px) {

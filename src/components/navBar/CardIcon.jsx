@@ -1,5 +1,6 @@
 import React from 'react'
 import "./CardIcon.css"
+
 function CardIcon({logo, title, filter, kind}) {
     return (
         <div className='CardIcon'>
