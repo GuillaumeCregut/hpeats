@@ -1,0 +1,11 @@
+.cardimage-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mealButton{
+    display: flex;
+    justify-content: space-around;
+}
+ 
