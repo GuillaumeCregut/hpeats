@@ -2,15 +2,15 @@ import React from 'react'
 import MealCardsLists from '../components/meals/MealCardsLists';
 import MenuFilters from '../components/navbar/MenuFilters'
 
-const Home = () => {
-     
+const Home = ({ user }) => {
+
     return (
         <div className='home'>
-            <MenuFilters />            
+            <MenuFilters user={user} />
             <MealCardsLists />
         </div>
     )
-            
+
 }
 
 export default Home

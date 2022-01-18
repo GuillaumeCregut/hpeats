@@ -8,7 +8,7 @@ const Cart = (props) => {
     /*here we call API for animals */
 
     /*Def local variables */
-    const { cartItems, addToCart, removeFromCart, shippinPrice, setShippinPrice } = props;
+    const { cartItems, addToCart, removeFromCart, shippinPrice, setShippinPrice, userLogged } = props;
     /*Calculate total price and total Weight*/
     let totalWeight = 0;
     let totalPriceItems = 0;
@@ -20,8 +20,7 @@ const Cart = (props) => {
     let totalPrice = totalPriceItems + shippinPrice;
 
     const validCart = () => {
-        //If user is logged userLogged
-        if (true) {
+        if (userLogged) {
             alert(`Veuillez régler le montant de ${totalPrice} mornilles`);
         }
         else {
