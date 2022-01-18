@@ -3,6 +3,8 @@ import { useState } from "react";
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import './App.css';
+import MealDetails from "./components/meals/MealDetails";
+
 function App() {
   /*Cart Management */
   const [cart, setCart] = useState([]);
@@ -36,6 +38,7 @@ function App() {
         <Route path="/cart" element={<Cart cartItems={cart}
           addToCart={addTotCart}
           removeFromCart={removeFromCart} />} />
+        <Route path= "mealInfos/:id" element = {<MealDetails />} />
       </Routes>
     </div>
   );

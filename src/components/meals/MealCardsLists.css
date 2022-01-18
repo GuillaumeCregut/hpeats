@@ -1,11 +1,15 @@
-.cardimage-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Righteous&display=swap');
 
 .mealButton{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
+    
 }
- 
+.buttonStarters{
+    background-color: #481617 ;
+    color: white;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif; 
+    
+}

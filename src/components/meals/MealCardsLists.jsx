@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import MealCardContainer from './MealCardContainer';
 import './MealCardsLists.css'
 
-const MealCardsLists = () => { 
+const MealCardsLists = ({filterKind}) => { 
 
     const [mealsCards, setMealsCards] = useState([]);
     const [trigger, setTrigger] = useState ('');
@@ -24,13 +24,17 @@ const MealCardsLists = () => {
     return (
 
         <div className='MealCardsList'>
-            <div className='mealButton'>
+            <div className='mealButton' >
+            {/* style = {{backgroundImage:`url(${mealsCards.pictures})` }} > */}
                 <button onClick={()=>handleTrigger('ent')}>Selectionner Entrée</button>
                 <button onClick={()=>handleTrigger('plat')}>Selectionner Plat</button>
                 <button onClick={()=>handleTrigger('dessert')}>Selectionner Dessert</button>
             </div>
+            
+            
             <div className='cardimage-container'>
-                <MealCardContainer mealsCards={mealsCards} filterTypes = {trigger}/>
+                <MealCardContainer mealsCards={mealsCards} filterTypes = {trigger} />
+
             </div>
         </div>
     );
