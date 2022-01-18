@@ -3,7 +3,6 @@ import CartItem from '../cartitem/CartItem';
 import './CartList.css';
 
 const CartList = (props) => {
-    //Props contient le tableau de commande
     const { cart, addToCart, removeFromCart } = props;
 
     return (
@@ -28,7 +27,6 @@ const CartList = (props) => {
                                 addToCart={addToCart}
                                 removeFromCart={removeFromCart}
                             />)}
-
                     </tbody>
                 </table>)}
         </div>
