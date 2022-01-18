@@ -34,3 +34,31 @@
 {
     border : 1px solid black;
 }
+
+@media screen and (max-width: 426px) {
+    .CartImgCell{
+        display: none;
+    }
+
+    .CartCell
+    {
+        font-size: 0.7rem;
+    }
+
+    .CartListBtn
+    {
+        border-radius: 7px;
+        height : 14px;
+        width: 14px;
+        font-size: small;
+    }
+
+    .CartListBenMin{
+        margin-right: 3px;
+    }
+    
+    .CartListBeAdd{
+        margin-left: 3px;
+    }
+    
+}
