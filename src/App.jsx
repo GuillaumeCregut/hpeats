@@ -31,10 +31,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Bienvenue à HPEats !</h1>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/cart" element={<Cart cartItems={cart}
+        <Route path="/cart" element={<Cart cartItems={cart}
           addToCart={addTotCart}
           removeFromCart={removeFromCart} />} />
       </Routes>
