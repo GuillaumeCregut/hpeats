@@ -17,7 +17,6 @@ const MealDetails = ({addToCart}) => {
     }, [])
 
     return (
-
         <div className='MealDetails containeur'>
             <h1>{mealInfos.name}</h1>
             <img className = 'image-details' src={mealInfos.picture} alt={mealInfos.name} />

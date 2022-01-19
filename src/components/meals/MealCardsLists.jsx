@@ -22,7 +22,6 @@ const MealCardsLists = ({addToCart}) => {
     }
     
     return (
-        
         <div className='MealCardsList'>
             <div className='mealButtons' >
                 <button className = "button" onClick={()=>handleTrigger('ent')}>Selectionner Entrée</button>
