@@ -10,7 +10,7 @@ function App() {
   const [cart, setCart] = useState([]);
 
   //This function will be used to add meal to card in all the app.
-  const addTotCart = (product) => {
+  const addToCart = (product) => {
     const exist = cart.find((item) => item.id === product.id);
     if (exist) {
       setCart(cart.map(item => item.id === product.id ? { ...exist, qty: exist.qty + 1 } : item));
@@ -34,11 +34,11 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Home  addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cartItems={cart}
-          addToCart={addTotCart}
+          addToCart={addToCart}
           removeFromCart={removeFromCart} />} />
-        <Route path= "mealInfos/:id" element = {<MealDetails />} />
+        <Route path= "mealInfos/:id" element = {<MealDetails addToCart={addToCart}/>} />
       </Routes>
     </div>
   );

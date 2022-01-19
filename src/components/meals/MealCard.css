@@ -1,22 +1,27 @@
-.starters-img{
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-}
-.mealButton{
-    background-color: #162E25;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 150px;
+.meal-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 50px 50px 50px;
 }
 
-.meal-container{
-   display: flex;
-   justify-content: space-between;
-   flex-direction: column;
+.mealImage {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 50%;
 }
+
+.mealImage:hover {
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%;  
+  -webkit-transform: rotate(360deg); 
+  transform: rotate(360deg);
+}
+ 
+

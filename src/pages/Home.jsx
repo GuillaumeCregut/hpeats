@@ -2,12 +2,12 @@ import React from 'react'
 import MealCardsLists from '../components/meals/MealCardsLists';
 import MenuFilters from '../components/navbar/MenuFilters'
 
-const Home = () => {
+const Home = ({addToCart}) => {
      
     return (
         <div className='home'>
             <MenuFilters />            
-            <MealCardsLists />
+            <MealCardsLists addToCart={addToCart} />
         </div>
     )
             
