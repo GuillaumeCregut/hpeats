@@ -8,7 +8,7 @@ import MealDetails from "./components/meals/MealDetails";
 function App() {
   /*Cart Management */
   const [cart, setCart] = useState([]);
-
+  const [shippinPrice, setShippinPrice] = useState(0);
   //This function will be used to add meal to card in all the app.
   const addToCart = (product) => {
     const exist = cart.find((item) => item.id === product.id);
@@ -37,7 +37,11 @@ function App() {
         <Route exact path="/" element={<Home  addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cartItems={cart}
           addToCart={addToCart}
-          removeFromCart={removeFromCart} />} />
+          removeFromCart={removeFromCart}
+          shippinPrice={shippinPrice}
+          setShippinPrice={setShippinPrice}
+          />} 
+        />
         <Route path= "mealInfos/:id" element = {<MealDetails addToCart={addToCart}/>} />
       </Routes>
     </div>
@@ -45,3 +49,4 @@ function App() {
 }
 
 export default App;
+
