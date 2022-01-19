@@ -3,16 +3,15 @@ import CartItem from '../cartitem/CartItem';
 import './CartList.css';
 
 const CartList = (props) => {
-    //Props contient le tableau de commande
     const { cart, addToCart, removeFromCart } = props;
 
     return (
-        <div>
+        <div className="CartList">
             {cart.length === 0 ? <div>Le panier est vide</div> :
                 (<table className="CartTable">
                     <thead>
                         <tr className="CartTableHead">
-                            <td></td>
+                            <td className='CartImgCell'></td>
                             <td>Nom</td>
                             <td>Prix unitaire</td>
                             <td>Quantité</td>
@@ -28,7 +27,6 @@ const CartList = (props) => {
                                 addToCart={addToCart}
                                 removeFromCart={removeFromCart}
                             />)}
-
                     </tbody>
                 </table>)}
         </div>
