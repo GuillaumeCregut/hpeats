@@ -9,7 +9,7 @@ const MealCardsLists = ({addToCart}) => {
     const [mealsCards, setMealsCards] = useState([]);
     const [trigger, setTrigger] = useState ('');
     
-    const url ='https://a.nacapi.com/HPMeats';
+    const url ='https://a.nacapi.com/HPMeats/';
     useEffect(() => {
     axios
     .get(url)
