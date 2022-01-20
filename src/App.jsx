@@ -1,9 +1,12 @@
+import Footer from './components/footer/Footer'
+import Scroll from "./components/scroll/Scroll";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import './App.css';
 import MealDetails from "./components/meals/MealDetails";
+
 
 function App() {
   /*Cart Management */
@@ -33,6 +36,9 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Welcome HPEats!</h1>
+      
+      
       <Routes>
         <Route exact path="/" element={<Home  addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cartItems={cart}
@@ -44,6 +50,11 @@ function App() {
         />
         <Route path= "mealInfos/:id" element = {<MealDetails addToCart={addToCart}/>} />
       </Routes>
+      
+      
+      <Scroll /> 
+      <Footer />      
+      
     </div>
   );
 }

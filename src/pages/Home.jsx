@@ -4,7 +4,7 @@ import MenuFilters from '../components/navbar/MenuFilters'
 import { useState } from 'react';
 
 const Home = ({addToCart}) => {
-     
+
     const [filterKind, setFilterKind] = useState('')
     const changeFilter = (newFilter) => {
         if(filterKind === newFilter){

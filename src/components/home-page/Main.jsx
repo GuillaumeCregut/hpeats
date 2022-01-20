@@ -8,7 +8,7 @@ const Main = ({meal}) => {
             <div className='main-container'>
                 <img className = 'mainImg' src={meal.picture} alt={meal.name} /> 
             </div>
-      </div>
+        </div>
     )
 }
 
