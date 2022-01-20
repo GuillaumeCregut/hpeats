@@ -29,9 +29,7 @@ const Cart = (props) => {
         totalWeight += item.weight * item.qty;
         return 0;
     })
-    /* temporaire*/
-    totalWeight = 50;
-    let totalPrice = totalPriceItems + shippinPrice;
+    let totalPrice = totalPriceItems + parseInt(shippinPrice);
 
     const validCart = () => {
         //If user is logged userLogged
