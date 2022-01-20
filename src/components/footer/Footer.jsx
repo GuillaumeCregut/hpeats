@@ -2,7 +2,6 @@ import React from "react";
 import { FaLinkedin, FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import "./Footer.css";
 
-
 function Footer() {
     let iconeStyle = {fontSize: "2em", boxShadow: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px" }
     return (

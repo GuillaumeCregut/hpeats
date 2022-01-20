@@ -8,8 +8,7 @@ const Home = () => {
             <MenuFilters />            
             <MealCardsLists />
         </div>
-    )
-            
+    )      
 }
 
 export default Home
