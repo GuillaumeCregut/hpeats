@@ -3,9 +3,9 @@ import MealCardsLists from '../components/meals/MealCardsLists';
 import MenuFilters from '../components/navbar/MenuFilters'
 import { useState } from 'react';
 
-const Home = () => {
-     const [filterKind, setFilterKind] = useState('')
-
+const Home = ({addToCart}) => {
+     
+    const [filterKind, setFilterKind] = useState('')
     const changeFilter = (newFilter) => {
         if(filterKind === newFilter){
             setFilterKind('')
@@ -17,10 +17,9 @@ const Home = () => {
     return (
         <div className='home'>
             <MenuFilters changeFilter={changeFilter}/>            
-            <MealCardsLists  filterKind={filterKind}/>
+            <MealCardsLists  filterKind={filterKind} addToCart={addToCart}/>
         </div>
-    )
-            
+    )        
 }
 
 export default Home
