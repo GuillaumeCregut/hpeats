@@ -5,8 +5,10 @@ import { useState } from 'react';
 
 const Home = ({ addToCart, user }) => {
 
-    const [filterKind, setFilterKind] = useState('')
+    const [filterKind, setFilterKind] = useState('');
+    const [trigger, setTrigger] = useState('');
     const changeFilter = (newFilter) => {
+        setTrigger('');
         if (filterKind === newFilter) {
             setFilterKind('')
         } else {
@@ -17,7 +19,7 @@ const Home = ({ addToCart, user }) => {
     return (
         <div className='home'>
             <MenuFilters changeFilter={changeFilter} user={user} />
-            <MealCardsLists filterKind={filterKind} addToCart={addToCart} />
+            <MealCardsLists filterKind={filterKind} trigger={trigger} setTrigger={setTrigger} addToCart={addToCart} />
         </div>
     )
 }
