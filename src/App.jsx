@@ -5,6 +5,7 @@ import { useState } from "react";
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import './App.css';
+import MealDetails from "./components/meals/MealDetails";
 
 
 function App() {
@@ -39,13 +40,15 @@ function App() {
       
       
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Home  addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cartItems={cart}
           addToCart={addToCart}
           removeFromCart={removeFromCart}
           shippinPrice={shippinPrice}
           setShippinPrice={setShippinPrice}
-        />} />
+          />} 
+        />
+        <Route path= "mealInfos/:id" element = {<MealDetails addToCart={addToCart}/>} />
       </Routes>
       
       
@@ -57,5 +60,4 @@ function App() {
 }
 
 export default App;
-
 

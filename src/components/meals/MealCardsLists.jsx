@@ -4,11 +4,10 @@ import { useState, useEffect } from 'react';
 import MealCardContainer from './MealCardContainer';
 import './MealCardsLists.css'
 
-const MealCardsLists = ( {filterKind}) => { 
+const MealCardsLists = ({filterKind}) => { 
 
     const [mealsCards, setMealsCards] = useState([]);
     const [trigger, setTrigger] = useState ('');
-    
     const url ='https://a.nacapi.com/HPMeats';
     useEffect(() => {
     axios
@@ -16,12 +15,10 @@ const MealCardsLists = ( {filterKind}) => {
     .then((res)=>res.data)
     .then((data)=> setMealsCards(data))
     }, []);
- 
+
     function handleTrigger(filter){
         setTrigger(filter);
     }
-    
-    
 
     return (
 
