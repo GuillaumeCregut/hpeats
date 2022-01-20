@@ -10,9 +10,9 @@ import './App.css';
 function App() {
   /*Cart Management */
   const [cart, setCart] = useState([]);
-
+  const [shippinPrice, setShippinPrice] = useState(0);
   //This function will be used to add meal to card in all the app.
-  const addTotCart = (product) => {
+  const addToCart = (product) => {
     const exist = cart.find((item) => item.id === product.id);
     if (exist) {
       setCart(cart.map(item => item.id === product.id ? { ...exist, qty: exist.qty + 1 } : item));
@@ -41,8 +41,11 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/cart" element={<Cart cartItems={cart}
-          addToCart={addTotCart}
-          removeFromCart={removeFromCart} />} />
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+          shippinPrice={shippinPrice}
+          setShippinPrice={setShippinPrice}
+        />} />
       </Routes>
       
       
@@ -54,3 +57,5 @@ function App() {
 }
 
 export default App;
+
+
