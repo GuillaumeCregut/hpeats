@@ -3,7 +3,6 @@
     text-align: center;
     height: 200px;
     width: 100vw;
-    /* position: fixed; */
 }
 
 .container_linkedin{
@@ -13,12 +12,10 @@
 
 .container_icon {
     padding: 15px;
-    
 }
 
 .container_icone a, .container_reseaux a{
     text-decoration: none;
-
 }
 
 .container_reseaux {
@@ -26,7 +23,6 @@
     justify-content: center;
     padding: 15px;
     margin: 5px;
-
 }
 
 .instaIcon {
