@@ -10,6 +10,9 @@ function App() {
   /*Cart Management */
   const [cart, setCart] = useState([]);
   const [shippinPrice, setShippinPrice] = useState(0);
+  const updateShippingPrice = (newPrice) => {
+    setShippinPrice(newPrice)
+  }
   /*User management */
   const initialUser = {
     id: 0,
@@ -52,7 +55,7 @@ function App() {
           addToCart={addToCart}
           removeFromCart={removeFromCart}
           shippinPrice={shippinPrice}
-          setShippinPrice={setShippinPrice}
+          setShippinPrice={updateShippingPrice}
         />} />
         <Route path="/user" element={<UserPage
           userLogged={userlogged}
