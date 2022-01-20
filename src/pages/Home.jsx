@@ -3,11 +3,7 @@ import MealCardsLists from '../components/meals/MealCardsLists';
 import MenuFilters from '../components/navbar/MenuFilters'
 import { useState } from 'react';
 
-<<<<<<< HEAD
 const Home = ({ addToCart, user }) => {
-=======
-const Home = ({addToCart}) => {
->>>>>>> dev
 
     const [filterKind, setFilterKind] = useState('')
     const changeFilter = (newFilter) => {
