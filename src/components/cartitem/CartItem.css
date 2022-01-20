@@ -1,5 +1,4 @@
-.CartCell
-{
+.CartCell{
     padding: 3px 15px;
     text-align: center;
     vertical-align: baseline;
@@ -10,8 +9,7 @@
     padding-left: 2px;
 }
 
-.CartListBtn
-{
+.CartListBtn{
     border-radius: 20px;
     height : 40px;
     width: 40px;
@@ -30,7 +28,34 @@
     margin-left: 5px;
 }
 
-.CartImageItem
-{
+.CartImageItem{
     border : 1px solid black;
+    width: 100px;
+    height: auto;
+}
+
+@media screen and (max-width: 426px) {
+    .CartImgCell{
+        display: none;
+    }
+
+    .CartCell{
+        font-size: 0.7rem;
+    }
+
+    .CartListBtn{
+        border-radius: 7px;
+        height : 14px;
+        width: 14px;
+        font-size: small;
+    }
+
+    .CartListBenMin{
+        margin-right: 3px;
+    }
+    
+    .CartListBeAdd{
+        margin-left: 3px;
+    }
+    
 }

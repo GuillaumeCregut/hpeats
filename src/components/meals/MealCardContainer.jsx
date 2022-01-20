@@ -1,20 +1,20 @@
 import React from 'react'
-import Desserts from './Desserts';
-import MainMeals from './MainMeals';
-import Starters from './Starters';
+import MealCards from './MealCards';
 
-const MealCardContainer = ({mealsCards, filterTypes}) => {
-    
+const MealCardContainer = ({ mealsCardFirstFilter, filterTypes }) => {
+
     return (
         <div className='Mealcards-container'>
-            {mealsCards
-                .filter((item)=> item.type === (filterTypes)
-                )
-                .map((mealCard, index) =>(
-                    <div key={index}>                  
-                    <Starters mealCard = {mealCard} />                   
-                    </div> )
-                )}
+            <div>
+                {
+                    mealsCardFirstFilter
+                        .filter((item) => item.type.includes(filterTypes))
+                        .map((item2, index) => (
+                            <MealCards key={index} mealCard={item2} />
+                        ))
+
+                }
+            </div>
         </div>
     )
 }

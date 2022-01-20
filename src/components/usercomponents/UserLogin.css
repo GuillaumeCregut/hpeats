@@ -1,0 +1,13 @@
+.LoginDiv,.SignInDiv {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 0 auto;
+}
+.InputUSerLogin{
+    width: 50%;
+    margin: 10px auto;
+}
+.LoginDiv,.SignInDiv h2{
+    text-align: center;
+}

@@ -1,10 +1,4 @@
-.mealButtons{
-display: flex;
-justify-content: space-around;
-padding: 300px 40px 60px 40px;
-}
-
-.button {
+.mealCart {
   background-color: #481617;
   border: 0 solid #e2e8f0;
   border-radius: 1.5rem;
@@ -27,15 +21,21 @@ padding: 300px 40px 60px 40px;
   touch-action: manipulation;
   }
   
-.button:hover {
+.mealCart:hover {
   background-color: #162E25;
   color: #fff;
 }
 
-@media (min-width: 768px) {
-  .button {
-    font-size: 1.125rem;
-    padding: 1rem 2rem;
-  }
+.image-details {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
 }
-    
+
+.mealDescription {
+    font-size: 30px;
+}
+
+.mealPrice {
+    font-size: 30px;
+}
