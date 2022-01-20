@@ -28,5 +28,5 @@ export default function Carousel({ totalWeight, updatePrice }) {
     )
   }
 
-}
+
 
