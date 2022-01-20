@@ -10,15 +10,15 @@ import axios from 'axios';
 const Cart = (props) => {
     /*here we call API for animals */
     const [animalCards, setAnimalCards] = useState([]);
-    const url ='https://a.nacapi.com/HPEatsAnimals';
+    const url = 'https://a.nacapi.com/HPEatsAnimals';
 
     useEffect(() => {
-    axios
-    .get(url)
-    .then((res)=>res.data)
-    .then((data)=> setAnimalCards(data))
+        axios
+            .get(url)
+            .then((res) => res.data)
+            .then((data) => setAnimalCards(data))
     }, []);
-    
+
     /*Def local variables */
     const { cartItems, addToCart, removeFromCart, shippinPrice, setShippinPrice, userLogged } = props;
     /*Calculate total price and total Weight*/
@@ -29,8 +29,6 @@ const Cart = (props) => {
         totalWeight += item.weight * item.qty;
         return 0;
     })
-    /* temporaire*/
-    totalWeight = 50;
     let totalPrice = totalPriceItems + shippinPrice;
 
     const validCart = () => {
@@ -52,7 +50,7 @@ const Cart = (props) => {
                 cart={cartItems}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart} />
-            <Carousel animalCard={animalCards} totalWeight={totalWeight} updatePrice={setShippinPrice} />
+            <Carousel totalWeight={totalWeight} updatePrice={setShippinPrice} />
             <div className='CartCheckOut'>
                 <p>Prix Total : <span className="">{totalPriceItems}</span> <i className="fab fa-d-and-d fa-2x MoneyIcon"></i></p>
                 <p>Poids total : {totalWeight} kg</p>

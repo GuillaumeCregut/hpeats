@@ -1,8 +1,19 @@
 import React from 'react';
 import InfiniteCarousel from "react-leaf-carousel";
 import AnimalCard from './AnimalCard';
+import axios from 'axios';
 
-export default function Carousel({animalCard, totalWeight, updatePrice}) {
+export default function Carousel({ totalWeight, updatePrice }) {
+  const [animalCards, setAnimalCards] = React.useState([]);
+  const url = 'https://a.nacapi.com/HPEatsAnimals';
+
+  React.useEffect(() => {
+    axios
+      .get(url)
+      .then((res) => res.data)
+      .then((data) => setAnimalCards(data))
+  }, []);
+
   return (
     <div>
       <InfiniteCarousel
@@ -30,12 +41,13 @@ export default function Carousel({animalCard, totalWeight, updatePrice}) {
         slidesToShow={4}
         scrollOnDevice={true}
       >
-      {animalCard
-      .filter((element) => parseInt(element.payload) > totalWeight)
-      .map((element, index) => (
-    <AnimalCard key={index} src={element.image} alt={element.name} updatePrice={updatePrice} animalPrice={element.price} />
-      ))}
+        {animalCards
+          .filter((element) => parseInt(element.payload) > totalWeight)
+          .map((element, index) => (
+            <AnimalCard key={index} src={element.image} alt={element.name} updatePrice={updatePrice} animalPrice={0} />
+          ))}
       </InfiniteCarousel>
+
     </div>
   )
 }
