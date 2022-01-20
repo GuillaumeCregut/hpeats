@@ -3,6 +3,7 @@ import { useState } from "react";
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import './App.css';
+
 function App() {
   /*Cart Management */
   const [cart, setCart] = useState([]);

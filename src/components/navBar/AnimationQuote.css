@@ -1,0 +1,29 @@
+
+.AnimationQuote{
+    overflow: hidden;
+    font-size: 25px ;
+    text-align: center;
+    color: transparent;
+    /* backface-visibility: hidden; */
+  }
+  
+  .AnimationQuote span {
+    display: inline-block;
+    text-shadow: 0 0 0 rgb(0, 0, 0);
+    animation: smoky 5s reverse;
+  }
+  
+  @keyframes smoky {
+   100% {
+      text-shadow: 0 0 40px rgb(0, 0, 0);
+    }
+    to {
+      transform:
+        translate3d(15rem,-8rem,0)
+        rotate(-40deg)
+        skewX(70deg)
+        scale(1.5);
+      text-shadow: 0 0 20px rgb(0, 0, 0);
+      opacity: 0;
+    }
+  }

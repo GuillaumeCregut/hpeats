@@ -1,7 +1,9 @@
 import React from 'react';
-import CardIcon from './CardIcon';
-import "./MenuFilters.css" ;
 import {Link} from 'react-router-dom';
+import CardIcon from './CardIcon';
+import AnimationQuote from './AnimationQuote';
+import "./MenuFilters.css" ;
+
 
 
 import LogoVegan from '../../assets/img/LogoVegan.png';
@@ -20,7 +22,10 @@ function MenuFilters({changeFilter}) {
                 <div className='logo-hpeat'>
                     <Logo />
                 </div>
-                <h1>Bienvenue à HPEats !</h1>            
+                <div className='title-quote'>
+                <h1>Bienvenue à HPEats ! </h1>
+                <AnimationQuote /> 
+                </div>           
                 <div className='logo-cart'>
                 <Link to='/cart' className='cart'><CardIcon logo={LogoCart} title = "Panier"/></Link>
                 </div>
