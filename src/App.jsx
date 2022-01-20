@@ -1,9 +1,12 @@
 import Footer from './components/footer/Footer'
+import Scroll from "./components/scroll/Scroll";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import './App.css';
+
+
 function App() {
   /*Cart Management */
   const [cart, setCart] = useState([]);
@@ -34,15 +37,18 @@ function App() {
     <div className="App">
       <h1>Welcome HPEats!</h1>
       
-      <footer>
-      <Footer />
-      </footer>
+      
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/cart" element={<Cart cartItems={cart}
           addToCart={addTotCart}
           removeFromCart={removeFromCart} />} />
       </Routes>
+      
+      
+      <Scroll /> 
+      <Footer />      
+      
     </div>
   );
 }
