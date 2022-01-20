@@ -19,7 +19,7 @@ const Home = ({ addToCart, user }) => {
     return (
         <div className='home'>
             <MenuFilters changeFilter={changeFilter} user={user} />
-            <MealCardsLists filterKind={filterKind} trigger={trigger} setTrigger={setTrigger} addToCart={addToCart} />
+            <MealCardsLists filterKind={filterKind} trigger={trigger} setTrigger={setTrigger} />
         </div>
     )
 }
