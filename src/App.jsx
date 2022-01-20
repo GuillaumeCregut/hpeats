@@ -4,6 +4,7 @@ import Cart from './pages/Cart';
 import Home from './pages/Home';
 import UserPage from './pages/UserPage';
 import './App.css';
+import MealDetails from "./components/meals/MealDetails";
 
 function App() {
   /*Cart Management */
@@ -45,9 +46,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<Home
-          user={user}
-        />} />
+        <Route exact path="/" element={<Home user={user}
+          addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cartItems={cart}
           addToCart={addToCart}
           removeFromCart={removeFromCart}
@@ -59,7 +59,9 @@ function App() {
           setUserLogged={setUserLogged}
           user={user}
           setUser={setUser}
-          defaultUser={initialUser} />} />
+          defaultUser={initialUser} />}
+        />
+        <Route path="mealInfos/:id" element={<MealDetails addToCart={addToCart} />} />
       </Routes>
     </div>
   );

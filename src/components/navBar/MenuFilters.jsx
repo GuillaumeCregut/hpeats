@@ -4,6 +4,7 @@ import "./MenuFilters.css";
 import { Link } from 'react-router-dom';
 import LogoUser from '../logouser/LogoUser';
 
+
 import LogoVegan from '../../assets/img/LogoVegan.png';
 import Logoflexi from '../../assets/img/LogoFlexi.png';
 import LogoTradi from '../../assets/img/LogoTradi.png';
@@ -12,7 +13,8 @@ import LogoEtrange from '../../assets/img/LogoEtrange.png';
 import LogoCart from '../../assets/img/LogoCart.png';
 import Logo from '../Logo.jsx'
 
-function MenuFilters({ user }) {
+function MenuFilters({ changeFilter, user }) {
+
     return (
         <div className='MenuFilters'>
             <div className='logo-title-cart'>
@@ -27,11 +29,11 @@ function MenuFilters({ user }) {
             </div>
 
             <div className='logo-menu'>
-                <CardIcon logo={LogoVegan} title="Vegan" />
-                <CardIcon logo={Logoflexi} title="Flexi" />
-                <CardIcon logo={LogoTradi} title="Tradi" />
-                <CardIcon logo={LogoPotion} title="Potion" />
-                <CardIcon logo={LogoEtrange} title="Etrange" />
+                <CardIcon logo={LogoVegan} title="Vegan" filter={changeFilter} kind='vegan' />
+                <CardIcon logo={Logoflexi} title="Flexi" filter={changeFilter} kind='flexi' />
+                <CardIcon logo={LogoTradi} title="Tradi" filter={changeFilter} kind='tradi' />
+                <CardIcon logo={LogoPotion} title="Potion" filter={changeFilter} kind='potions' />
+                <CardIcon logo={LogoEtrange} title="Etrange" filter={changeFilter} kind='strange' />
             </div>
         </div>
     )
