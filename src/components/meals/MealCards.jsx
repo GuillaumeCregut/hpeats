@@ -4,9 +4,10 @@ import axios from 'axios';
 import './MealCard.css';
 
 const MealCards = ({ mealCard }) => {   
+
     const [mealInfos, setmealInfos] = useState([]);
     
-    useEffect(() => {
+        useEffect(() => {
         axios
         .get(`https://a.nacapi.com/HPMeats/${mealCard.id}`)
         .then((res) => {

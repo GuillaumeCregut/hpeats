@@ -1,11 +1,11 @@
 import React from 'react';
-import InfiniteCarousel from "react-leaf-carousel";
+// import InfiniteCarousel from "react-leaf-carousel";
 import AnimalCard from './AnimalCard';
 
 export default function Carousel({animalCard, totalWeight, updatePrice}) {
   return (
     <div>
-      <InfiniteCarousel
+      {/* <InfiniteCarousel
         breakpoints={[
           {
             breakpoint: 500,
@@ -35,7 +35,7 @@ export default function Carousel({animalCard, totalWeight, updatePrice}) {
       .map((element, index) => (
     <AnimalCard key={index} src={element.image} alt={element.name} updatePrice={updatePrice} animalPrice={element.price} />
       ))}
-      </InfiniteCarousel>
+      </InfiniteCarousel> */}
     </div>
   )
 }
