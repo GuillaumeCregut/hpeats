@@ -1,21 +1,22 @@
 import React from 'react'
 import MealCards from './MealCards';
 
-const MealCardContainer = ({mealsCards, filterTypes}) => {
-    
+const MealCardContainer = ({ mealsCardFirstFilter, filterTypes }) => {
+
     return (
         <div className='Mealcards-container'>
             <div>
-                {mealsCards
-                    .filter((item)=> item.type === (filterTypes)
+                {mealsCardFirstFilter
+                    .filter((item) => item.type.includes(filterTypes)
                     )
-                    .map((mealCard, index) =>(
-                        <div key={index}>                  
-                        <MealCards mealCard = {mealCard}  />                   
-                        </div> )
+                    .map((mealCard, index) => (
+                        <div key={index}>
+                            <MealCards mealCard={mealCard} />
+                        </div>)
                     )}
+
             </div>
-         </div>
+        </div>
     )
 }
 

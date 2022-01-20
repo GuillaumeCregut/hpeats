@@ -10,17 +10,17 @@ import axios from 'axios';
 const Cart = (props) => {
     /*here we call API for animals */
     const [animalCards, setAnimalCards] = useState([]);
-    const url ='https://a.nacapi.com/HPEatsAnimals';
+    const url = 'https://a.nacapi.com/HPEatsAnimals';
 
     useEffect(() => {
-    axios
-    .get(url)
-    .then((res)=>res.data)
-    .then((data)=> setAnimalCards(data))
+        axios
+            .get(url)
+            .then((res) => res.data)
+            .then((data) => setAnimalCards(data))
     }, []);
-    
+
     /*Def local variables */
-    const { cartItems, addToCart, removeFromCart, shippinPrice, setShippinPrice } = props;
+    const { cartItems, addToCart, removeFromCart, shippinPrice, setShippinPrice, userLogged } = props;
     /*Calculate total price and total Weight*/
     let totalWeight = 0;
     let totalPriceItems = 0;
@@ -32,8 +32,7 @@ const Cart = (props) => {
     let totalPrice = totalPriceItems + parseInt(shippinPrice);
 
     const validCart = () => {
-        //If user is logged userLogged
-        if (true) {
+        if (userLogged) {
             alert(`Veuillez régler le montant de ${totalPrice} mornilles`);
         }
         else {
@@ -51,13 +50,12 @@ const Cart = (props) => {
                 cart={cartItems}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart} />
-            <Carousel animalCard={animalCards} totalWeight={totalWeight} updatePrice={setShippinPrice} />
+
             <div className='CartCheckOut'>
                 <p>Prix Total : <span className="">{totalPriceItems}</span> <i className="fab fa-d-and-d fa-2x MoneyIcon"></i></p>
                 <p>Poids total : {totalWeight} kg</p>
             </div>
-            {/*Ici on mets le composant carousel de choix de mode de livraison. Il recoit en props 
-                l tabeau etourné par l'aPI,le poids total du panier et la variable (shippinPrice) permettant de calculer le cout total de la livraison*/}
+            <Carousel animalCard={animalCards} totalWeight={totalWeight} updatePrice={setShippinPrice} />
             <div className='CartCheckOut' >
                 <p>Montant à payer : <span className="">{totalPrice}</span> <i className="fab fa-d-and-d fa-2x MoneyIcon"></i></p>
                 <div className='CartValidationBtn' onClick={validCart}>Valider le panier</div>
