@@ -3,23 +3,25 @@ import MealCardsLists from '../components/meals/MealCardsLists';
 import MenuFilters from '../components/navbar/MenuFilters'
 import { useState } from 'react';
 
-const Home = ({addToCart}) => {
+const Home = ({ addToCart, user }) => {
 
-    const [filterKind, setFilterKind] = useState('')
+    const [filterKind, setFilterKind] = useState('');
+    const [trigger, setTrigger] = useState('');
     const changeFilter = (newFilter) => {
-        if(filterKind === newFilter){
+        setTrigger('');
+        if (filterKind === newFilter) {
             setFilterKind('')
-        }else{
+        } else {
             setFilterKind(newFilter)
         }
     }
 
     return (
         <div className='home'>
-            <MenuFilters changeFilter={changeFilter}/>            
-            <MealCardsLists  filterKind={filterKind} addToCart={addToCart}/>
+            <MenuFilters changeFilter={changeFilter} user={user} />
+            <MealCardsLists filterKind={filterKind} trigger={trigger} setTrigger={setTrigger} />
         </div>
-    )        
+    )
 }
 
 export default Home

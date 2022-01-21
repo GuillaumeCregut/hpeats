@@ -30,6 +30,8 @@
 
 .CartImageItem{
     border : 1px solid black;
+    width: 100px;
+    height: auto;
 }
 
 @media screen and (max-width: 426px) {
