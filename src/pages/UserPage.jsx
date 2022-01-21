@@ -6,8 +6,9 @@ import UserLogin from '../components/usercomponents/UserLogin';
 import UserLogged from '../components/usercomponents/UserLogged';
 import Logo from '../components/Logo';
 import './UserPage.css';
+import LogoUser from '../components/logouser/LogoUser';
 
-const UserPage = ({ userLogged, setUserLogged, user, setUser, defaultUser }) => {
+const UserPage = ({ userLogged, setUserLogged, user, setUser, defaultUser, setIdHisto }) => {
     //Récupération de la liste des utilisateurs
     const url = 'https://a.nacapi.com/HPEatsUsers';
     const [users, setUsers] = useState([]);
@@ -54,14 +55,21 @@ const UserPage = ({ userLogged, setUserLogged, user, setUser, defaultUser }) => 
 
     return (
         <div>
-            <div className="LogoDivUser">
-                <Link to="/"><Logo /></Link>
+            <div className="UserHeader">
+                <div className='UserLogoHeader'>
+                    <Link to="/"><Logo /></Link>
+                </div>
+                <div className="UserLogoDiv">
+                    <LogoUser user={user} />
+                </div>
             </div>
             <h1 className='UserPageTitle'>Utilisateurs</h1>
             {userLogged ?
                 <UserLogged
                     setUserLogged={setUserLogged}
-                    handleDisconnectBtn={handleDisconnectBtn} /> :
+                    handleDisconnectBtn={handleDisconnectBtn}
+                    user={user}
+                /> :
                 <UserLogin
                     login={login}
                     setLogin={setLogin}

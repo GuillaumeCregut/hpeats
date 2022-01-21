@@ -1,10 +1,21 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import HistoryItem from '../historyitem/HistoryItem';
+import './UserLogged.css';
 
-const UserLogged = ({ setUserLogged, defaultUser, handleDisconnectBtn }) => {
-
+const UserLogged = ({ setUserLogged, defaultUser, handleDisconnectBtn, user }) => {
+    const [history, setHistory] = useState([]);
+    console.log(user);
+    const url = `https://a.nacapi.com/HPEatsHistory?user_id=${user.id}`;
+    useEffect(() => {
+        //Récupérer de l'API historique
+        axios.get(url)
+            .then((res) => setHistory(res.data))
+    }, []);
     return (
         <div>
-            <h2>Utilisateur connecté</h2>
+            <p>Bienvenue <span className=''>{user.firstName} {user.name}</span> </p>
+            <HistoryItem history={history} />
             <button onClick={handleDisconnectBtn}>Deconnexion</button>
         </div>
     )

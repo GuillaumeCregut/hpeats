@@ -3,7 +3,7 @@ import CardIcon from './CardIcon';
 import "./MenuFilters.css";
 import { Link } from 'react-router-dom';
 import LogoUser from '../logouser/LogoUser';
-
+import CartIcon from './CartIcon';
 
 import LogoVegan from '../../assets/img/LogoVegan.png';
 import Logoflexi from '../../assets/img/LogoFlexi.png';
@@ -24,7 +24,7 @@ function MenuFilters({ changeFilter, user }) {
                 <h1>Bienvenue à HPEats !</h1>
                 <div className='logo-cart'>
                     <Link to="/user"> <LogoUser user={user} /> </Link>
-                    <Link to='/cart' className='cart'><CardIcon logo={LogoCart} title="Panier" /></Link>
+                    <Link to='/cart' className='cart'><CartIcon /></Link>
                 </div>
             </div>
 
