@@ -2,8 +2,8 @@
 .CartSize{
     position : absolute;
     top : 50%;
-    left: 35%;
-    transform: translateY(-45%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 4rem;
     font-weight: bold;
     color: white;
