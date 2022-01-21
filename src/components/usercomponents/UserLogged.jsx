@@ -14,9 +14,17 @@ const UserLogged = ({ setUserLogged, defaultUser, handleDisconnectBtn, user }) =
     }, []);
     return (
         <div>
-            <p>Bienvenue <span className=''>{user.firstName} {user.name}</span> </p>
+            <p className='UserLoggedPName'>Bienvenue <span className='UserLoggedName'>{user.firstName} {user.name}</span> </p>
+            <p className="UserLoggedBtn"><button onClick={handleDisconnectBtn}>Deconnexion</button></p>
+            <div className="UserInformation">
+                <p>Vos informations</p>
+                <form action="">
+                    <p><label htmlFor="firstName">Prénom : </label> <input type="text" name="" id="firstName" value={user.firstName} /></p>
+                    <p><label htmlFor="name">Nom : </label> <input type="text" name="" id="name" value={user.name} /></p>
+                    <p><label htmlFor="distance">Distance : </label> <input type="text" name="" id="distance" value={user.distance} /></p>
+                </form>
+            </div>
             <HistoryItem history={history} />
-            <button onClick={handleDisconnectBtn}>Deconnexion</button>
         </div>
     )
 }

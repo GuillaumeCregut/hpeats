@@ -1,0 +1,26 @@
+.HistoryItem{
+    width: 80%;
+    margin : 0 auto;
+}
+
+.HistoryTitle{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.UserHistoryTable{
+    width: 40%;
+    margin: 10px auto;
+}
+
+.HistoryDate{
+    width: 40%;
+}
+
+.UserHistoryTable tr{
+    text-align: center;
+}
+
+.HistoryPrice{
+    text-align: right;
+}

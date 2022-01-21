@@ -4,11 +4,12 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import UserLogin from '../components/usercomponents/UserLogin';
 import UserLogged from '../components/usercomponents/UserLogged';
+import CartIcon from '../components/navbar/CartIcon';
 import Logo from '../components/Logo';
 import './UserPage.css';
 import LogoUser from '../components/logouser/LogoUser';
 
-const UserPage = ({ userLogged, setUserLogged, user, setUser, defaultUser, setIdHisto }) => {
+const UserPage = ({ userLogged, setUserLogged, user, setUser, defaultUser, setIdHisto, cart }) => {
     //Récupération de la liste des utilisateurs
     const url = 'https://a.nacapi.com/HPEatsUsers';
     const [users, setUsers] = useState([]);
@@ -61,6 +62,7 @@ const UserPage = ({ userLogged, setUserLogged, user, setUser, defaultUser, setId
                 </div>
                 <div className="UserLogoDiv">
                     <LogoUser user={user} />
+                    <Link to='/cart' className='cart'><CartIcon cart={cart} /></Link>
                 </div>
             </div>
             <h1 className='UserPageTitle'>Utilisateurs</h1>

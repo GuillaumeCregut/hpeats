@@ -69,6 +69,7 @@ function App() {
           user={user}
           setUser={setUser}
           defaultUser={initialUser}
+          cart={cart}
         />}
         />
         <Route path="mealInfos/:id" element={<MealDetails
