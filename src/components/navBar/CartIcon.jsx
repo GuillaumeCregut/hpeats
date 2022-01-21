@@ -1,15 +1,20 @@
 import React from 'react';
 import "./CardIcon.css";
+import "./CartIcon.css";
 import LogoCart from '../../assets/img/LogoCart.png';
 
-function CardIcon({ }) {
+function CartIcon({ cart }) {
+    let totalCartItems = cart.reduce((a, c) => { return a + c.qty }, 0);
 
     return (
-        <div className='CardIcon'>
-            <img src={LogoCart} alt="logo" />
-            <p>Panier</p>
+        <div className="CartIconContainer">
+            <div className='CardIcon'>
+                <img src={LogoCart} alt="logo" />
+                <p>Panier</p>
+                {cart.length > 0 ? <div className="CartSize">{totalCartItems}</div> : ''}
+            </div>
         </div>
     )
 }
 
-export default CardIcon;
+export default CartIcon;

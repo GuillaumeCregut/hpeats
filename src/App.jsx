@@ -54,7 +54,7 @@ function App() {
 
       <Routes>
         <Route exact path="/" element={<Home user={user}
-          addToCart={addToCart} />} />
+          addToCart={addToCart} cart={cart} />} />
         <Route path="/cart" element={<Cart cartItems={cart}
           addToCart={addToCart}
           removeFromCart={removeFromCart}
@@ -71,7 +71,11 @@ function App() {
           defaultUser={initialUser}
         />}
         />
-        <Route path="mealInfos/:id" element={<MealDetails addToCart={addToCart} />} />
+        <Route path="mealInfos/:id" element={<MealDetails
+          addToCart={addToCart}
+          cart={cart}
+        />}
+        />
       </Routes>
 
 
