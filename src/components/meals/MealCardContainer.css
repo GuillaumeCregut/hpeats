@@ -1,0 +1,13 @@
+.Mealcards-container {
+    width: 50%;
+    margin: auto;
+}
+
+/* .AnimalList-title {
+    text-align: center;
+} */
+
+.mealcards {
+    display: flex;
+    justify-content: space-between;
+}
