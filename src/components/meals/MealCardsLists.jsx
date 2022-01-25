@@ -28,7 +28,7 @@ const MealCardsLists = ({ filterKind, trigger, setTrigger }) => {
                 <button className='button' onClick={() => handleTrigger('dessert')}> Dessert</button>
             </div>
             <div className='cardimage-container'>
-                <MealCardContainer mealsCardFirstFilter={mealsCards.filter((item) => item.kind.includes(filterKind))} filterTypes={trigger} />
+                <MealCardContainer mealsCardFirstFilter={mealsCards.filter((item) => item.kind.includes(filterKind))} filterTypes={trigger} mealCard='mealCard' />
             </div>
         </div>
     );

@@ -73,6 +73,7 @@ function App() {
           setUser={setUser}
           defaultUser={initialUser} />}
         />
+        
         <Route path="mealInfos/:id" element={<MealDetails addToCart={addToCart} />} />
       </Routes>
       
