@@ -1,4 +1,22 @@
+.UserHeader{
+    display: flex;
+}
+
 .UserPageTitle{
     font-family: harrypotter;
+    text-align: center;
+    margin-top: 20px;
+}
 
+.UserLogoHeader{
+   flex: 5;
+   margin: 0 auto;
+}
+
+.UserLogoDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-top: 20px;
+    flex : 1;
 }

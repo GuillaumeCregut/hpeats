@@ -17,6 +17,17 @@
     text-align: center;
 }
 
+.CartUnvalidBtn{
+    padding: 5px;
+    background-color: lightgray;
+    border :1px darkgray;
+    cursor : not-allowed;
+    margin : 10px auto;
+    width: 120px;
+    text-align: center;
+    color : darkgray
+}
+
 @media screen and (max-width: 426px) {
     .CartCheckOut{
         font-size: 1rem;
