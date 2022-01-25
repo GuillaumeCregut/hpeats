@@ -9,7 +9,10 @@ import './App.css';
 import MealDetails from "./components/meals/MealDetails";
 
 
+
+
 function App() {
+    
   /*Cart Management */
   const [cart, setCart] = useState([]);
   const [shippinPrice, setShippinPrice] = useState(0);

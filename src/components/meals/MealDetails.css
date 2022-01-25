@@ -1,14 +1,17 @@
-.mealCart {
+.mealdetails{
+  display: flex;
+}
+  
+.mealCart{
+  
   background-color: #481617;
   border: 0 solid #e2e8f0;
   border-radius: 1.5rem;
   box-sizing: border-box;
   color: #e6cc7c;
-  cursor: pointer;
   display: inline-block;
   font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 16px;
   line-height: 1;
   padding: 1rem 1.6rem;
   text-align: center;
@@ -18,8 +21,9 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  }
-  
+
+}
+
 .mealCart:hover {
   background-color: #162E25;
   color: #fff;
@@ -30,13 +34,17 @@
     height: auto;
     object-fit: cover;
     border-radius: 10%;
+    padding: 40%, 60%, 40%, 60%,;
 }
 
 .mealDescription {
   align-items: center;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .mealPrice {
-    font-size: 30px;
+    font-size: 15px;
 }
+
+
+
