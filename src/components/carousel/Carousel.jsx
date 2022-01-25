@@ -4,7 +4,7 @@ import AnimalCard from './AnimalCard';
 
 export default function Slider({ animalCard, totalWeight, updatePrice }) {
   return (
-    <div>
+    <div className='CarouselAnimal'>
       <Carousel itemsToShow={3}>
         {animalCard
           .filter((element) => parseInt(element.payload) > totalWeight)

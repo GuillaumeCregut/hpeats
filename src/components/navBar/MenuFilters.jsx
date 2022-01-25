@@ -39,4 +39,4 @@ function MenuFilters({ changeFilter, user }) {
     )
 }
 
-export default MenuFilters
+export default MenuFilters;

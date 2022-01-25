@@ -16,6 +16,10 @@
     width: 120px;
     text-align: center;
 }
+.CartCheckOut {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
 
 @media screen and (max-width: 426px) {
     .CartCheckOut{
