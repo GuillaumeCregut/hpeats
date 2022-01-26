@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import HistoryItem from '../historyitem/HistoryItem';
-import UserInfoForm from './UserInfoForm';
 import './UserLogged.css';
 
 const UserLogged = ({ setUserLogged, defaultUser, handleDisconnectBtn, user }) => {
@@ -26,7 +25,6 @@ const UserLogged = ({ setUserLogged, defaultUser, handleDisconnectBtn, user }) =
             <p className='UserLoggedPName'>Bienvenue <span className='UserLoggedName'>{user.firstName} {user.name}</span> </p>
             <p className="UserLoggedBtn"><span onClick={handleDisconnectBtn} className='UserDisconnectBtn'>Deconnexion</span></p>
             <div className="UserInformation">
-                <UserInfoForm user={user} handleChangeUserInfo={handleChangeUserInfo} />
             </div>
             <HistoryItem history={history} />
         </div>
