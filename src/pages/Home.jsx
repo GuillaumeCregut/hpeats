@@ -3,7 +3,7 @@ import MealCardsLists from '../components/meals/MealCardsLists';
 import MenuFilters from '../components/navbar/MenuFilters'
 import { useState } from 'react';
 
-const Home = ({ addToCart, user }) => {
+const Home = ({ addToCart, user, cart }) => {
 
     const [filterKind, setFilterKind] = useState('');
     const [trigger, setTrigger] = useState('');
@@ -18,7 +18,7 @@ const Home = ({ addToCart, user }) => {
 
     return (
         <div className='home'>
-            <MenuFilters changeFilter={changeFilter} user={user} />
+            <MenuFilters changeFilter={changeFilter} user={user} cart={cart} />
             <MealCardsLists filterKind={filterKind} trigger={trigger} setTrigger={setTrigger} />
         </div>
     )
