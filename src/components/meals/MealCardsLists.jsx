@@ -20,7 +20,6 @@ const MealCardsLists = ({ filterKind, trigger, setTrigger }) => {
     }
 
     return (
-
         <div className='MealCardsList'>
             <div className='mealButtons'>
                 <button className='button' onClick={() => handleTrigger('ent')}>Entrée</button>
