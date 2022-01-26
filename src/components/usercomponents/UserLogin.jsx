@@ -102,7 +102,7 @@ const UserLogin = ({ login, setLogin, password, setPassword, handleConnectBtn, s
         <div className="UserLoginMainContainer">
             <div className='UserLoginContainer'>
                 <form className="signUp UserLoginForm">
-                    <h3 className='USerTitle'>Créer un compte</h3>
+                    <h3 className='UserTitle'>Créer un compte</h3>
                     <input className="w100 UserInput" type="text" value={signinFirstname} placeholder='Votre prénom' reqired onChange={(e) => setSigninFirstname(e.target.value)} />
                     <input className="w100 UserInput" type="text" value={signinLastName} placeholder='Votre nom' reqired onChange={(e) => setSigninLastName(e.target.value)} />
                     <input type="password" className='UserInput' value={signinPass1} placeholder='mot de passe' onChange={(e) => setSigninPass1(e.target.value)} />
@@ -113,7 +113,7 @@ const UserLogin = ({ login, setLogin, password, setPassword, handleConnectBtn, s
                     <button className="form-btn dx UserBtn" type="button" onClick={handlePostEvent}>S'enregistrer</button>
                 </form>
                 <form className="signIn UserLoginForm">
-                    <h3 className='USerTitle'>Connexion</h3>
+                    <h3 className='UserTitle'>Connexion</h3>
                     <input className='UserInput' type="text" value={login} placeholder='Votre prénom' reqired onChange={(e) => handleChangeLogin(e)} />
                     <input className='UserInput' type="password" value={password} placeholder='mot de passe' reqired onChange={(e) => handleChangePass(e)} />
                     <button className="form-btn sx back UserBtn" type="button" onClick={handleBackClick}>S'enregistrer</button>

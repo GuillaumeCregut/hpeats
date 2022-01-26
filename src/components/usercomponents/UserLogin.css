@@ -3,15 +3,14 @@
     position : relative;
     display: flex;
     justify-content: center;
-    width: auto;
+    width: 80%;
+    margin : 20px auto;
+    transform: translateX(-15%);
 }
 .UserLoginContainer{
     position:absolute;
 	width: auto;
 	height:auto;
-    /* top : 0px; */
-	/* top: calc(50% - 240px);
-	left: calc(50% - 160px); */
 }
 
 .UserLoginForm {
@@ -42,7 +41,7 @@
 	font-size: 9px;
 }
 
-.USerTitle {
+.UserTitle {
 	font-family: 'Dosis';
 	font-size: 35px;
 	text-transform: uppercase;
@@ -50,7 +49,7 @@
 	margin-bottom: 30px;
 }
 
-.UserInputt,
+.UserInput,
 .UserBtn{
 	outline: none !important; 
 }
@@ -254,3 +253,25 @@
 		opacity: 1;
 	}
 } 
+@media screen and (max-width: 426px) {
+    .UserLoginMainContainer{
+        width: 30%;
+        transform: translateX(-110%);
+        font-size: 1rem;
+    }
+    .UserLoginForm {
+        width: 300px;
+        height: 400px;
+        overflow: scroll;
+    }
+    .UserTitle{
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    .UserBtn.form-btn{
+        font-size: 0.81rem;
+    }
+    .UserInput{
+        font-size: inherit;
+    }
+}
