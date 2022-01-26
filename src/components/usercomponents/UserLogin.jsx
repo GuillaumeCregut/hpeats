@@ -50,26 +50,77 @@ const UserLogin = ({ login, setLogin, password, setPassword, handleConnectBtn, s
             alert("Les mots de passe sont différents");
         }
     }
+    /*
+    $(".log-in").click(function(){
+        $(".signIn").addClass("active-dx");
+        $(".signUp").addClass("inactive-sx");
+        $(".signUp").removeClass("active-sx");
+        $(".signIn").removeClass("inactive-dx");
+    });
+    
+    $(".back").click(function(){
+        $(".signUp").addClass("active-sx");
+        $(".signIn").addClass("inactive-dx");
+        $(".signIn").removeClass("active-dx");
+        $(".signUp").removeClass("inactive-sx");
+    });
+    */
+    const handleBackClick = () => {
+        const signUpList = document.getElementsByClassName('signUp');
+        console.log(signUpList);
+        for (let i = 0; i < signUpList.length; i++) {
+            signUpList[i].classList.add('active-sx');
+            signUpList[i].classList.remove("inactive-sx");
+        };
+        const signInList = document.getElementsByClassName('signIn');
+        console.log(signInList);
+        for (let i = 0; i < signInList.length; i++) {
+            signInList[i].classList.add('inactive-sx');
+            signInList[i].classList.remove("active-sx");
+        };
+    };
+    const handleLogin = () => {
+        const signUpList = document.getElementsByClassName('signUp');
+        console.log(signUpList);
+        for (let i = 0; i < signUpList.length; i++) {
+            signUpList[i].classList.add('inactive-sx');
+            signUpList[i].classList.remove("active-sx");
+        };
+        const signInList = document.getElementsByClassName('signIn');
+        console.log(signUpList);
+        for (let i = 0; i < signInList.length; i++) {
+            signInList[i].classList.add('active-sx');
+            signInList[i].classList.remove("inactive-sx");
+        };
+    };
+    const handleSigin = () => {
+        const divSigin = document.getElementById('SignInForm');
+        divSigin.style.visibility = "visible";
+    }
 
     return (
-        <div>
-            <div className='LoginDiv'>
-                <h2>Se connecter</h2>
-                <input type="text" value={login} name="login" placeholder='Votre prénom' className='InputUSerLogin' onChange={(e) => handleChangeLogin(e)}></input>
-                <input type="password" value={password} name="password" placeholder='mot de passe' className='InputUSerLogin' onChange={(e) => handleChangePass(e)}></input>
-                <button onClick={handleConnectBtn}>Connexion</button>
-            </div>
-            <div className='SignInDiv'>
-                <h2>S'enregistrer</h2>
-                <input type="text" value={signinFirstname} name="firstname" placeholder='Votre prénom' className='InputUSerLogin' onChange={(e) => setSigninFirstname(e.target.value)}></input>
-                <input type="text" value={signinLastName} name="lastname" placeholder='Votre nom' className='InputUSerLogin' onChange={(e) => setSigninLastName(e.target.value)}></input>
-                <input type="password" value={signinPass1} name="password" placeholder='mot de passe' className='InputUSerLogin' onChange={(e) => setSigninPass1(e.target.value)}></input>
-                <input type="password" value={signinPass2} name="password" placeholder='mot de passe' className='InputUSerLogin' onChange={(e) => setSinginPass2(e.target.value)}></input>
-                <input type="text" value={signinDistance} name="distance" placeholder='Distance' className='InputUSerLogin' onChange={(e) => setSigninDistance(e.target.value)}></input>
-                <input type="text" value={siginImage} name="image" placeholder='Votre photo' className='InputUSerLogin' onChange={(e) => setSigninImage(e.target.value)}></input>
-                <button onClick={handlePostEvent}>S'enregistrer</button>
-            </div>
-        </div>
+        <div className="UserLoginMainContainer">
+            <div className='UserLoginContainer'>
+                <form className="signUp UserLoginForm">
+                    <h3 className='USerTitle'>Créer un compte</h3>
+                    <input className="w100 UserInput" type="text" value={signinFirstname} placeholder='Votre prénom' reqired onChange={(e) => setSigninFirstname(e.target.value)} />
+                    <input className="w100 UserInput" type="text" value={signinLastName} placeholder='Votre nom' reqired onChange={(e) => setSigninLastName(e.target.value)} />
+                    <input type="password" className='UserInput' value={signinPass1} placeholder='mot de passe' onChange={(e) => setSigninPass1(e.target.value)} />
+                    <input type="password" className='UserInput' value={signinPass2} placeholder='mot de passe' onChange={(e) => setSinginPass2(e.target.value)} />
+                    <input type="text" value={signinDistance} placeholder='Distance' className='UserInput' onChange={(e) => setSigninDistance(e.target.value)}></input>
+                    <input type="text" value={siginImage} placeholder='Votre photo' className='UserInput' onChange={(e) => setSigninImage(e.target.value)}></input>
+                    <button className="form-btn sx log-in UserBtn" type="button" onClick={handleLogin}>Connexion</button>
+                    <button className="form-btn dx UserBtn" type="button" onClick={handlePostEvent}>S'enregistrer</button>
+                </form>
+                <form className="signIn UserLoginForm">
+                    <h3 className='USerTitle'>Connexion</h3>
+                    <input className='UserInput' type="text" value={login} placeholder='Votre prénom' reqired onChange={(e) => handleChangeLogin(e)} />
+                    <input className='UserInput' type="password" value={password} placeholder='mot de passe' reqired onChange={(e) => handleChangePass(e)} />
+                    <button className="form-btn sx back UserBtn" type="button" onClick={handleBackClick}>S'enregistrer</button>
+                    <button className="form-btn dx UserBtn" type="button" onClick={handleConnectBtn}>Connexion</button>
+                </form>
+            </div >
+        </div >
     )
 }
 
