@@ -24,7 +24,6 @@ function MenuFilters({ changeFilter, user, cart }) {
                 <div className='titleHpeat'>
                 <h1>Bienvenue à HPEats ! </h1>                   
                 </div> 
-
                 <div className="animation-quote">
                 <AnimationQuote />
                 </div>
@@ -33,7 +32,6 @@ function MenuFilters({ changeFilter, user, cart }) {
                     <Link to='/cart' className='cart'><CartIcon cart={cart} /></Link>
                 </div>
             </div>
-
             <div className='logo-menu'>
                 <CardIcon logo={LogoVegan} title="Vegan" filter={changeFilter} kind='vegan' />
                 <CardIcon logo={Logoflexi} title="Flexi" filter={changeFilter} kind='flexi' />
