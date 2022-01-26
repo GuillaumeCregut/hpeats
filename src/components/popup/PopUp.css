@@ -1,0 +1,50 @@
+.PopUpMail{
+    padding: 5px 20px;
+    background-color: blue;
+    border-radius: 30px;
+    color : black;
+    width :50%;
+    z-index: 2;
+    position: absolute;
+    top : 0;
+    left : 30%;
+}
+.CloseCross{
+    text-align: right; 
+    color : black;
+}
+
+.cross{
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.PopUpTitle{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.PopUpImage{
+    width: 400px;
+}
+
+.PopUpContItem{
+    display : flex;
+}
+
+.PopUpDesc{
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+
+.PopUpPrice{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.3rem;
+}
+
+.PopUpBtn{
+    direction: rtl;
+    padding-bottom: 20px;
+}
