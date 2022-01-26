@@ -5,17 +5,15 @@ import AnimationQuote from './AnimationQuote';
 import "./MenuFilters.css" ;
 
 import LogoUser from '../logouser/LogoUser';
+import CartIcon from './CartIcon';
 import LogoVegan from '../../assets/img/LogoVegan.png';
 import Logoflexi from '../../assets/img/LogoFlexi.png';
 import LogoTradi from '../../assets/img/LogoTradi.png';
 import LogoPotion from '../../assets/img/LogoPotion.png';
 import LogoEtrange from '../../assets/img/LogoEtrange.png';
-import LogoCart from '../../assets/img/LogoCart.png';
 import Logo from '../Logo.jsx'
 
-function MenuFilters({ changeFilter, user }) {
-    
-
+function MenuFilters({ changeFilter, user, cart }) {
 
     return (
         <div className='MenuFilters'>
@@ -32,7 +30,7 @@ function MenuFilters({ changeFilter, user }) {
                 </div>
                 <div className='logo-cart'>
                     <Link to="/user"> <LogoUser user={user} /> </Link>
-                    <Link to='/cart' className='cart'><CardIcon logo={LogoCart} title="Panier" /></Link>
+                    <Link to='/cart' className='cart'><CartIcon cart={cart} /></Link>
                 </div>
             </div>
 
