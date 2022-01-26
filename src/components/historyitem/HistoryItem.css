@@ -6,6 +6,8 @@
 .HistoryTitle{
     text-align: center;
     margin-top: 30px;
+    font-size: 3rem;
+    text-decoration: underline;
 }
 
 .UserHistoryTable{
@@ -23,4 +25,14 @@
 
 .HistoryPrice{
     text-align: right;
+}
+
+@media screen and (max-width: 426px) {
+    .UserHistoryTable{
+        width: 80%;
+    }
+
+    .HistoryTitle{
+        font-size: 1.3rem;
+    }
 }
