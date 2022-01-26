@@ -7,7 +7,7 @@ const LogoUser = ({ user }) => {
 
     return (
         <div className='IconUser'>
-            <img src={user.image === '' ? unknownUser : user.image} alt={user.name} />
+            <img className='UserLogoImg' src={user.image === '' ? unknownUser : user.image} alt={user.name} />
         </div>
     )
 }
