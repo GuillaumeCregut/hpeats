@@ -2,3 +2,9 @@
     height: 200px;
     width: 200px;
 }
+
+@media screen and (max-width: 426px) {
+    .CarouselAnimal{
+        font-size: 1rem;
+    }
+}
