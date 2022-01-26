@@ -8,10 +8,11 @@ const UserInfoForm = (user, handleChangeUserInfo) => {
     const [infoImage, setInfoImage] = useState(userInfo.image);
     const [infoPass1, setInfoPass1] = useState(userInfo.password);
     const [infoPass2, setInfoPass2] = useState(userInfo.password);
+
     const handleClickBtn = (e) => {
         e.preventDefault();
         if (infoPass1 === infoPass2) {
-            if (window.confirm('Voulez vous modifier vos informations ?')) {
+            if (window.confirm('Voulez-vous modifier vos informations ?')) {
                 const modifiedUser = {
                     firstName: infoFirstName,
                     name: infoFirstName,
@@ -24,7 +25,7 @@ const UserInfoForm = (user, handleChangeUserInfo) => {
             }
         }
         else {
-            alert('les mots de passes sont différents');
+            alert('les mots de passe sont différents');
         }
     };
     return (
