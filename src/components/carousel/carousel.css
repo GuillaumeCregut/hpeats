@@ -1,3 +1,14 @@
 /*.infinite-carousel-button-next {
     opacity: 1;
 }*/
+
+
+@media screen and (max-width: 426px) {
+    .CarouselAnimal{
+        font-size: 4rem;
+    }
+    .itemsToShow{
+        
+
+    }
+}
