@@ -15,7 +15,7 @@ const UserLogged = ({ setUserLogged, defaultUser, handleDisconnectBtn, user }) =
     return (
         <div>
             <p className='UserLoggedPName'>Bienvenue <span className='UserLoggedName'>{user.firstName} {user.name}</span> </p>
-            <p className="UserLoggedBtn"><button onClick={handleDisconnectBtn}>Deconnexion</button></p>
+            <p className="UserLoggedBtn"><span onClick={handleDisconnectBtn} className='UserDisconnectBtn'>Deconnexion</span></p>
             <div className="UserInformation">
                 <p>Vos informations</p>
                 <form action="">

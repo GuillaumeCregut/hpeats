@@ -50,49 +50,33 @@ const UserLogin = ({ login, setLogin, password, setPassword, handleConnectBtn, s
             alert("Les mots de passe sont différents");
         }
     }
-    /*
-    $(".log-in").click(function(){
-        $(".signIn").addClass("active-dx");
-        $(".signUp").addClass("inactive-sx");
-        $(".signUp").removeClass("active-sx");
-        $(".signIn").removeClass("inactive-dx");
-    });
-    
-    $(".back").click(function(){
-        $(".signUp").addClass("active-sx");
-        $(".signIn").addClass("inactive-dx");
-        $(".signIn").removeClass("active-dx");
-        $(".signUp").removeClass("inactive-sx");
-    });
-    */
+
     const handleBackClick = () => {
         const signUpList = document.getElementsByClassName('signUp');
-        console.log(signUpList);
         for (let i = 0; i < signUpList.length; i++) {
             signUpList[i].classList.add('active-sx');
             signUpList[i].classList.remove("inactive-sx");
         };
         const signInList = document.getElementsByClassName('signIn');
-        console.log(signInList);
         for (let i = 0; i < signInList.length; i++) {
             signInList[i].classList.add('inactive-sx');
             signInList[i].classList.remove("active-sx");
         };
     };
+
     const handleLogin = () => {
         const signUpList = document.getElementsByClassName('signUp');
-        console.log(signUpList);
         for (let i = 0; i < signUpList.length; i++) {
             signUpList[i].classList.add('inactive-sx');
             signUpList[i].classList.remove("active-sx");
         };
         const signInList = document.getElementsByClassName('signIn');
-        console.log(signUpList);
         for (let i = 0; i < signInList.length; i++) {
             signInList[i].classList.add('active-sx');
             signInList[i].classList.remove("inactive-sx");
         };
     };
+
     const handleSigin = () => {
         const divSigin = document.getElementById('SignInForm');
         divSigin.style.visibility = "visible";

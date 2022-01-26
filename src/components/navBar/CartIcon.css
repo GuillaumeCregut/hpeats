@@ -13,3 +13,10 @@
 {
     position: relative;
 }
+
+@media screen and (max-width: 426px) {
+    .CartSize{
+        font-size: 2rem;
+        transform: translate(-90%, -60%);
+    }
+}
