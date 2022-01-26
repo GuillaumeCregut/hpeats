@@ -54,33 +54,40 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome HPEats!</h1>
-      
-      
+
       <Routes>
         <Route exact path="/" element={<Home user={user}
-          addToCart={addToCart} />} />
+          addToCart={addToCart} cart={cart} />} />
         <Route path="/cart" element={<Cart cartItems={cart}
           addToCart={addToCart}
           removeFromCart={removeFromCart}
           shippinPrice={shippinPrice}
           setShippinPrice={updateShippingPrice}
+          userLogged={userlogged}
+          user={user}
         />} />
         <Route path="/user" element={<UserPage
           userLogged={userlogged}
           setUserLogged={setUserLogged}
           user={user}
           setUser={setUser}
-          defaultUser={initialUser} />}
+          defaultUser={initialUser}
+          cart={cart}
+        />}
+        />
+        <Route path="mealInfos/:id" element={<MealDetails
+          addToCart={addToCart}
+          cart={cart}
+        />}
         />
         
         <Route path="mealInfos/:id" element={<MealDetails addToCart={addToCart} />} />
       </Routes>
-      
-      
-      <Scroll /> 
-      <Footer />      
-      
+
+
+      <Scroll />
+      <Footer />
+
     </div>
   );
 }

@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import Logo from '../Logo';
-// import MealModal from './MealModal';
 import './MealDetails.css';
+import CartIcon from '../navbar/CartIcon';
 
-const MealDetails = ({ addToCart }) => {
+const MealDetails = ({ addToCart, cart }) => {
 
     const [mealInfos, setMealInfos] = useState([]);
     const params = useParams();
@@ -19,10 +19,10 @@ const MealDetails = ({ addToCart }) => {
     }, [])
 
     return (
-        <div className='MealDetails-containeur'>
-            
-            <div className="LogoDiv">
-                <Link to="/"><Logo /></Link>
+        <div className='MealDetails containeur'>
+            <div className="MealDetailLogoDiv">
+                <div className="MealDetailLogoCont"><Link to="/"><Logo /></Link></div>
+                <div className="MealDetailCartCont"><Link to='/cart'><CartIcon cart={cart} /></Link></div>
             </div>
             < div className='mealdetails'>
                 <img className='image-details' src={mealInfos.picture} alt={mealInfos.name} />

@@ -43,8 +43,19 @@
 }
 
 .mealPrice {
-    font-size: 15px;
+    font-size: 30px;
 }
 
+.MealDetailLogoDiv
+{
+  display: flex;
+  padding-top: 10px;
+}
 
+.MealDetailLogoCont{
+  flex :5;
+}
 
+.MealDetailCartCont{
+  flex : 1;
+}

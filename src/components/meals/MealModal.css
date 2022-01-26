@@ -1,5 +1,6 @@
 .darkBG {
-    background-color: rgba(0, 0, 0, 0.2);
+  display:none;
+    background-color: rgba(177, 20, 20, 0.2);
     width: 50vw;
     height: 50vh;
     z-index: 1;
