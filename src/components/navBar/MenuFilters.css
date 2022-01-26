@@ -1,32 +1,48 @@
-.MenuFilters{
-    height: 12%;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.MenuFilters {
+    height: 12%; 
+}
+
+.logo-title-cart {
+    display: flex;
+}
+
+
+.titleHpeat {
+    margin-top: 40px;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 35%;
+    position:absolute;
     
 }
 
-.logo-title-cart{
+.animation-quote {
     display: flex;
-    margin: 5px;
+    align-items: flex-end;
+    margin-left: 25%;    
+}
+
+
+
+.cart {
+    text-decoration: none;
+    color: black;
 }
 
 .logo-cart {
     display: flex;
     margin-left: auto;
+    width: 20%;
 }
 
-.cart{
-    text-decoration: none;
-    color: black;
-}
 
-.logo-title-cart h1{
-    margin-left: auto;
-    margin-top: 40px;
-    font-size: 40px;
-}
 
 .logo-menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 50px;
 }
 
@@ -35,11 +51,11 @@
         display: none;
     }
 
-    .logo-hpeat{
+    .logo-hpeat {
         margin-left: 40%;
     }
     
-    .logo-menu{
+    .logo-menu {
         position: fixed;
         bottom: 0;
         margin-left: 35px;
@@ -50,5 +66,10 @@
         box-shadow: inset -1px 3px 8px 5px #ffffff,
                     2px 5px 16px 0px #000000,
                     0px 0px 50px 10px rgba(214,214,214,0.29); ;
+        z-index: 1;
+    }
+
+    .animation-quote {
+        display: none;
     }
 }

@@ -51,9 +51,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome HPEats!</h1>
-      
-      
       <Routes>
         <Route exact path="/" element={<Home user={user}
           addToCart={addToCart} />} />

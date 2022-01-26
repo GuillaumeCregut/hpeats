@@ -1,18 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import {Link} from 'react-router-dom';
 import CardIcon from './CardIcon';
 import AnimationQuote from './AnimationQuote';
 import "./MenuFilters.css" ;
 
-=======
-import CardIcon from './CardIcon';
-import "./MenuFilters.css";
-import { Link } from 'react-router-dom';
 import LogoUser from '../logouser/LogoUser';
->>>>>>> dev
-
-
 import LogoVegan from '../../assets/img/LogoVegan.png';
 import Logoflexi from '../../assets/img/LogoFlexi.png';
 import LogoTradi from '../../assets/img/LogoTradi.png';
@@ -22,6 +14,8 @@ import LogoCart from '../../assets/img/LogoCart.png';
 import Logo from '../Logo.jsx'
 
 function MenuFilters({ changeFilter, user }) {
+    
+
 
     return (
         <div className='MenuFilters'>
@@ -29,14 +23,13 @@ function MenuFilters({ changeFilter, user }) {
                 <div className='logo-hpeat'>
                     <Logo />
                 </div>
-<<<<<<< HEAD
-                <div className='title-quote'>
-                <h1>Bienvenue à HPEats ! </h1>
-                <AnimationQuote /> 
-                </div>           
-=======
-                <h1>Bienvenue à HPEats !</h1>
->>>>>>> dev
+                <div className='titleHpeat'>
+                <h1>Bienvenue à HPEats ! </h1>                   
+                </div> 
+
+                <div className="animation-quote">
+                <AnimationQuote />
+                </div>
                 <div className='logo-cart'>
                     <Link to="/user"> <LogoUser user={user} /> </Link>
                     <Link to='/cart' className='cart'><CardIcon logo={LogoCart} title="Panier" /></Link>
