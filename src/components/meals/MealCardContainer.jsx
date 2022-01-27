@@ -3,7 +3,6 @@ import PopUp from '../popup/PopUp';
 import MealCards from './MealCards';
 import './MealCardContainer.css';
 
-<<<<<<< HEAD
 const MealCardContainer = ({ mealsCardFirstFilter, filterTypes, addToCart, cart }) => {
     const arrayVisible = [];
     const toggleVisibility = (id) => {
@@ -36,20 +35,6 @@ const MealCardContainer = ({ mealsCardFirstFilter, filterTypes, addToCart, cart 
                     ))
 
             }
-=======
-const MealCardContainer = ({ mealsCardFirstFilter, filterTypes, mealCard, addToCart}) => {
-    return (
-        <div className='Mealcards-container'>            
-            <div className='mealCards'>
-                {
-                    mealsCardFirstFilter
-                        .filter((item) => item.type.includes(filterTypes))
-                        .map((item2, index) => (
-                            <MealCards key={index} mealCard={item2}  />
-                        ))
-                }
-            </div>
->>>>>>> dev
         </div>
     )
 }
