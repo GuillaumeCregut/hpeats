@@ -31,3 +31,9 @@
 .topIcon {
     width: 400px;
 }
+
+@media screen and (max-width: 426px){
+    .ScrollTop {
+        font-size: 10px;
+    }
+}
