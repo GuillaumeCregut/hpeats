@@ -4,11 +4,14 @@
     font-family: 'harrypotter';
     src: url(./assets/fonts/HARRP___.TTF);
     font-weight: bold;
-  }
+}
 
 :root{
     font-family: 'Lato', sans-serif; 
     background-image: url(/src/assets/img/phenix.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
     
 * {
