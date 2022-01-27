@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Logo from '../Logo.jsx'
 import "./Scroll.css";
+import LogoLightning from '../../assets/img/LogoLightning.png'
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,7 +30,7 @@ export default function ScrollToTop() {
     <div className="scroll-to-top">
       {isVisible && (
         <div className="ScrollTop" onClick={scrollToTop}>
-          <span className="topIcon"> <Logo /> </span>
+          <span className="topIcon"> <img src={LogoLightning} alt="Lightning" /></span>
         </div>
       )}
     </div>

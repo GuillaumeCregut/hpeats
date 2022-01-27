@@ -1,21 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Righteous&display=swap');
 
-:root{
-    font-family: 'Lato', sans-serif; 
-    background-image: url(/src/assets/img/phenix.jpg);
+html {
+    overflow-x: hidden;
 }
-    
 * {
     margin: 0;
     padding: 0;
+    cursor: url('./assets/img/002-magic-wand.png'), auto;
     
 }
 
-body {
-    background: linear-gradient(-180deg, #e6cc7c, transparent) no-repeat;
+@font-face {
+    font-family: 'harrypotter';
+    src: url(./assets/fonts/HARRP___.TTF);
+    font-weight: bold;
 }
+
+:root{
+    font-family: 'Lato', sans-serif; 
+    background-image: url(/src/assets/img/phenix.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+    
+
 
 .App{
     position: relative;
     height: 600px;
 }
+

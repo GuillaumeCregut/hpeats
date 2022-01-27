@@ -10,6 +10,11 @@
 
 .Logo p {
     font-size: 200%;
+    font-family: 'harrypotter';
+}
+.SiteTitle
+{
+    font-family:'harrypotter'; 
 }
 
 @media screen and (max-width: 426px) {

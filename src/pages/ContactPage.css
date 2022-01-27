@@ -1,0 +1,104 @@
+.logo-to-home {
+    display:flex;
+    justify-content:space-between;
+}
+
+.ContactForm{
+    font-family:"trebuchet ms",sans-serif;
+    font-size:90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    }
+.form-contact {
+    padding:10px;
+    width:50%;
+}
+.fieldset, .fieldset-about {
+    padding:0 20px 20px 20px;
+    margin-bottom:10px;
+    border: 2px solid #ffd100;
+    border-radius: 49px;
+    font-size: 166%;
+}
+
+.fieldset-about{
+    height: 33%;
+}
+
+.text-top {
+    margin-top: 2%;
+}
+
+.imput-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    margin-top: 2%;
+}
+
+input::placeholder {
+    color: black;
+}
+
+legend {
+    color:#000000;
+    font-weight:bold
+}
+
+.label-contact {
+    margin-top:10px;
+    display:block;
+}
+
+.label-contact.inline {
+    display:inline;
+    margin-right:50px;
+    }
+.input-contact, textarea, select, option {
+    background-color:#fbf4ec;
+    }
+.input-contact, textarea, select {
+    padding:3px;
+    border:1px solid #F5C5C5;
+    border-radius:5px;
+    width:200px;
+    box-shadow:1px 1px 2px #C0C0C0 inset;
+    }
+.select-contact {
+    margin-top:10px;
+    }
+.input-contact[type=radio] {
+    background-color:transparent;
+    border:none;
+    width:10px;
+    }
+.input-contact[type=submit], input[type=reset] {
+    width:100px;
+    margin-left:5px;
+    box-shadow:1px 1px 1px #d8bc3d;
+    cursor:pointer;
+    }
+
+.input-sub-res {
+    display: flex;
+    justify-content: center;
+}
+
+.send {
+    width: 17%;
+    font-size: 120%;
+    color: #e6cc7c;
+    background-color: #162e25 ;
+}
+
+.cancel {
+    font-size: 120%;
+    color: #e6cc7c;
+    background-color: #481617;
+}
+
+.send, .cancel {
+    border-radius: 10px ;
+}

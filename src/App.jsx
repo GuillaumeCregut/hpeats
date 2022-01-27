@@ -5,11 +5,16 @@ import { useState } from "react";
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import UserPage from './pages/UserPage';
+import ContactPage from './pages/ContactPage';
 import './App.css';
+import LogoFormulaireDeContact from './assets/img/LogoFormulaireDeContact.png';
 import MealDetails from "./components/meals/MealDetails";
 
 
+
+
 function App() {
+
   /*Cart Management */
   const [cart, setCart] = useState([]);
   const [shippinPrice, setShippinPrice] = useState(0);
@@ -51,32 +56,40 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome HPEats!</h1>
-      
-      
       <Routes>
         <Route exact path="/" element={<Home user={user}
-          addToCart={addToCart} />} />
+          addToCart={addToCart} cart={cart} />} />
         <Route path="/cart" element={<Cart cartItems={cart}
           addToCart={addToCart}
           removeFromCart={removeFromCart}
           shippinPrice={shippinPrice}
           setShippinPrice={updateShippingPrice}
+          userLogged={userlogged}
+          user={user}
         />} />
         <Route path="/user" element={<UserPage
           userLogged={userlogged}
           setUserLogged={setUserLogged}
           user={user}
           setUser={setUser}
-          defaultUser={initialUser} />}
+          defaultUser={initialUser}
+          cart={cart}
+        />}
         />
+        <Route path="mealInfos/:id" element={<MealDetails
+          addToCart={addToCart}
+          cart={cart}
+        />}
+        />
+
         <Route path="mealInfos/:id" element={<MealDetails addToCart={addToCart} />} />
+        <Route path="/contact" element={<ContactPage logo={LogoFormulaireDeContact} title="FormulaireDeContact" />} />
       </Routes>
-      
-      
-      <Scroll /> 
-      <Footer />      
-      
+
+
+      <Scroll />
+      <Footer />
+
     </div>
   );
 }
