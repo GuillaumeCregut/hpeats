@@ -1,3 +1,9 @@
+.Mealcards-container{
+    position: relative;
+}
+.MealLine{
+    position: relative;
+}
 .Mealcards-container {
     width: 50%;
     margin: auto;

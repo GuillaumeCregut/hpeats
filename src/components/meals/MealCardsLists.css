@@ -23,7 +23,16 @@ padding: 50px;
   -webkit-user-select: none;
   touch-action: manipulation;
   }
-  
+
+ .MealHidden{
+   display: none;
+ }
+ 
+ .MealVisible{
+   display: block;
+   opacity: 1;
+ } 
+ 
 .button:hover {
   background-color: #162E25;
   color: #fff;
