@@ -1,17 +1,27 @@
+:root {
+    --popup-btn-click: brown;
+    --popup-back-color : #162E25;
+}
 .PopUpMail{
     padding: 5px 20px;
-    background-color: blue;
+    background-color: var(--popup-back-color);
     border-radius: 30px;
-    color : black;
+    color : white;
     width :50%;
     z-index: 2;
     position: absolute;
     top : 0;
     left : 30%;
 }
+
+.MoneyPopupIcon{
+    color: red;
+  
+}
+
 .CloseCross{
     text-align: right; 
-    color : black;
+    color : white;
 }
 
 .cross{
@@ -47,4 +57,27 @@
 .PopUpBtn{
     direction: rtl;
     padding-bottom: 20px;
+}
+.PopUpAddBtn{
+    background-color: var(--popup-btn-click);
+    color : white;
+    font-size: 1.5rem;
+    padding :5px 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+@media screen and (max-width: 426px) {
+    .PopUpImage{
+        width: 150px;
+        height: auto;
+    }
+
+    .PopUpMail{
+        width: 90%;
+        left : 0;
+    }
+
+    .PopUpTitle{
+        font-size: 1.7rem;
+    }
 }

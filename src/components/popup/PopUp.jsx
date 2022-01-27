@@ -10,12 +10,12 @@ const PopUp = ({ item2, addToCart, toggleVisibility }) => {
                 <img className='PopUpImage' src={item2.picture} alt={item2.name} />
                 <div>
                     <p className='PopUpDesc'>{item2.description}</p>
-                    <p className='PopUpPrice'>Prix : {item2.price}<i className="fab fa-d-and-d fa-1x MoneyIcon"></i></p>
+                    <p className='PopUpPrice'>Prix : {item2.price} <i className="fab fa-d-and-d fa-1x MoneyPopupIcon"></i></p>
                 </div>
             </div>
 
             <div className='PopUpBtn'>
-                <button className='mealCart' onClick={() => addToCart(item2)}>Ajouter au panier</button>
+                <button className='PopUpAddBtn' onClick={() => addToCart(item2)}>Ajouter au panier</button>
             </div>
         </div>
     )
