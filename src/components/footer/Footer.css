@@ -1,5 +1,5 @@
 .Footer {
-    margin-top: 100%;
+    margin-top: auto;
     text-align: center;
     height: 200px;
     width: 100vw;
@@ -44,5 +44,30 @@
 }
 
 .title_social {
-    font-family: 'Lato', sans-serif;
+    font-family: url(../../assets/img/fonts/HARRP___.TTF);
+    margin-bottom: none;
+}
+.title-footer{
+    
+}
+.title_form{
+    margin-bottom: 1%;
+}
+
+.formIcon{
+    height: 100px;
+    width: 100px;
+}
+
+.container_form{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    
+}
+
+@media screen and (max-width: 426px){
+.formIcon{
+    height: 50px;
+    width: 50px;
+}
 }
