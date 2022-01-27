@@ -1,7 +1,7 @@
 .mealButtons{
 display: flex;
 justify-content: space-around;
-padding: 60px 40px 60px 40px;
+padding: 50px;
 }
 
 .button {

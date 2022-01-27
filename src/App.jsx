@@ -56,7 +56,6 @@ function App() {
 
   return (
     <div className="App">
-
       <Routes>
         <Route exact path="/" element={<Home user={user}
           addToCart={addToCart} cart={cart} />} />

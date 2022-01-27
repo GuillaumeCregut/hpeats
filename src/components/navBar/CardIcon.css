@@ -1,8 +1,27 @@
 .CardIcon {
     text-align: center;
     margin-right: 20px;
+}
+
+.CardIcon button {
+    background: transparent;
+    border: none;
     
 }
+
+.CardIcon button:focus {
+    border-radius: 20px;
+    box-shadow: inset -1px 3px 8px 5px #ffffff, 4px 9px 30px 0px #000000, 0px 0px 50px 10px rgb(214 214 214 / 29%); 
+    /* transition: left 3s linear, width 3s linear; */
+}
+
+.CardIcon:hover {
+    
+    border-radius: 20px;
+    box-shadow: inset -1px 3px 8px 5px #ffffff, 4px 9px 30px 0px #000000, 0px 0px 50px 10px rgb(214 214 214 / 29%);
+    
+}
+
 
 .CardIcon img {
     width: 100PX;
@@ -12,6 +31,13 @@
     font-size: 25px;
     text-decoration: none;
 }
+
+ .CardIcon2{
+    border-radius: 20px;
+    box-shadow: inset -1px 3px 8px 5px #f10000,
+                 4px 9px 30px 0px #ff0000,
+                 0px 0px 50px 10px rgb(214 214 214 / 29%);
+} 
 
 @media screen and (max-width: 426px) {
     .CardIcon img {
