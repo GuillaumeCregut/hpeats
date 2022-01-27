@@ -39,14 +39,6 @@
 }
 
 @media screen and (max-width: 426px) {
-    .AdBox{
-        flex-direction: column;
-    }
-
-    .AdBoxSloganContainer{
-        padding-left: 0px;
-        padding-top: 25px;
-    }
     .AdBoxImg
     {
         width:  auto;
@@ -55,5 +47,10 @@
 
     .AdSlogan{
         font-size: 0.9rem;
+    }
+
+    .AdBoxSloganContainer{
+        height : 50px;
+        padding-left: 50px;
     }
 }
