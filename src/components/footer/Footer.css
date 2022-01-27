@@ -44,12 +44,10 @@
 }
 
 .title_social {
-    font-family: url(../../assets/img/fonts/HARRP___.TTF);
+    font-family: 'harrypotter';
     margin-bottom: none;
 }
-.title-footer{
-    
-}
+
 .title_form{
     margin-bottom: 1%;
 }
@@ -69,5 +67,9 @@
 .formIcon{
     height: 50px;
     width: 50px;
+}
+
+.bottomFooter{
+    height: 75px;
 }
 }
