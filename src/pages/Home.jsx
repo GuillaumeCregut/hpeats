@@ -2,6 +2,7 @@ import React from 'react'
 import MealCardsLists from '../components/meals/MealCardsLists';
 import MenuFilters from '../components/navbar/MenuFilters'
 import { useState } from 'react';
+// import MealModal from '../components/meals/MealModal';
 
 const Home = ({ addToCart, user, cart }) => {
 
