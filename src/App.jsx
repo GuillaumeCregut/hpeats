@@ -9,7 +9,10 @@ import './App.css';
 import MealDetails from "./components/meals/MealDetails";
 
 
+
+
 function App() {
+    
   /*Cart Management */
   const [cart, setCart] = useState([]);
   const [shippinPrice, setShippinPrice] = useState(0);
@@ -76,6 +79,8 @@ function App() {
           cart={cart}
         />}
         />
+        
+        <Route path="mealInfos/:id" element={<MealDetails addToCart={addToCart} />} />
       </Routes>
 
 

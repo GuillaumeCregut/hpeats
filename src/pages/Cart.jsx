@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CardList from '../components/cartlist/CartList';
 import Logo from '../components/Logo';
+import LogoUser from '../components/logouser/LogoUser'
 import './Cart.css';
 import Carousel from '../components/carousel/Carousel';
 import axios from 'axios';
@@ -70,8 +71,9 @@ const Cart = (props) => {
         <div>
             <div className="LogoDiv">
                 <Link to="/"><Logo /></Link>
+                <h2 className="CartTitle">Panier</h2>
+                <Link to="/user"> <LogoUser user={user} /> </Link>
             </div>
-            <h2 className="CartTitle">Panier</h2>
             <CardList
                 cart={cartItems}
                 addToCart={addToCart}

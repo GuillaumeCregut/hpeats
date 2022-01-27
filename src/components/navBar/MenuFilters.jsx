@@ -43,4 +43,4 @@ function MenuFilters({ changeFilter, user, cart }) {
     )
 }
 
-export default MenuFilters
+export default MenuFilters;
