@@ -14,6 +14,8 @@
 * {
     margin: 0;
     padding: 0;
+    cursor: url('./assets/img/002-magic-wand.png'), auto;
+    
 }
 
 body {
@@ -24,3 +26,4 @@ body {
     position: relative;
     height: 600px;
 }
+

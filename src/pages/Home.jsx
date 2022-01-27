@@ -2,6 +2,7 @@ import React from 'react'
 import MealCardsLists from '../components/meals/MealCardsLists';
 import MenuFilters from '../components/navbar/MenuFilters'
 import { useState } from 'react';
+// import MealModal from '../components/meals/MealModal';
 
 const Home = ({ addToCart, user, cart }) => {
 
@@ -20,6 +21,7 @@ const Home = ({ addToCart, user, cart }) => {
         <div className='home'>
             <MenuFilters changeFilter={changeFilter} user={user} cart={cart} />
             <MealCardsLists filterKind={filterKind} trigger={trigger} setTrigger={setTrigger} />
+            {/* <MealModal /> */}
         </div>
     )
 }
