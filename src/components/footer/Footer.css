@@ -44,7 +44,11 @@
 }
 
 .title_social {
+<<<<<<< HEAD
     font-family: 'harrpotter';
+=======
+    font-family: 'harrypotter';
+>>>>>>> dev
     margin-bottom: none;
 }
 
@@ -67,5 +71,9 @@
 .formIcon{
     height: 50px;
     width: 50px;
+}
+
+.bottomFooter{
+    height: 75px;
 }
 }
