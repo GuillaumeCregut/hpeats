@@ -1,0 +1,59 @@
+.AdBox{
+    display: flex;
+}
+
+.AdBoxImg
+{
+    width:  auto;
+    height: 100px;
+    position : absolute;
+    top : 0;
+    left: 0;
+   
+}
+
+.AdBoxImgContainer{
+    position : relative;
+    margin-left: 40px;
+
+}
+
+.Chicken{
+    transform:  rotate(45deg);
+}
+
+.Stop{
+    transform: translateX(-15px);
+}
+
+.AdBoxSloganContainer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding-left: 100px;
+}
+
+.AdSlogan{
+    font-size: 1.3rem;
+
+}
+
+@media screen and (max-width: 426px) {
+    .AdBox{
+        flex-direction: column;
+    }
+
+    .AdBoxSloganContainer{
+        padding-left: 0px;
+        padding-top: 25px;
+    }
+    .AdBoxImg
+    {
+        width:  auto;
+        height: 50px;
+    }
+
+    .AdSlogan{
+        font-size: 0.9rem;
+    }
+}
