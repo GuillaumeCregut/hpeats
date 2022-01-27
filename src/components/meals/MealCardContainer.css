@@ -1,0 +1,10 @@
+.Mealcards-container {
+    width: 50%;
+    margin: auto;
+}
+
+.mealcards {
+    display: flex;
+    justify-content: space-between;
+}
+

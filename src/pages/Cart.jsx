@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CardList from '../components/cartlist/CartList';
 import Logo from '../components/Logo';
+import LogoUser from '../components/logouser/LogoUser'
 import './Cart.css';
 import Carousel from '../components/carousel/Carousel';
 import axios from 'axios';
+import AdBox from '../components/adbox/AdBox';
 
 
 const Cart = (props) => {
@@ -20,7 +22,7 @@ const Cart = (props) => {
     }, []);
 
     /*Def local variables */
-    const { cartItems, addToCart, removeFromCart, shippinPrice, setShippinPrice, userLogged } = props;
+    const { cartItems, addToCart, removeFromCart, shippinPrice, setShippinPrice, userLogged, user } = props;
     /*Calculate total price and total Weight*/
     let totalWeight = 0;
     let totalPriceItems = 0;
@@ -30,13 +32,38 @@ const Cart = (props) => {
         return 0;
     })
     let totalPrice = totalPriceItems + parseInt(shippinPrice);
-
     const validCart = () => {
-        if (userLogged) {
-            alert(`Veuillez régler le montant de ${totalPrice} mornilles`);
+        if (shippinPrice === 0) {
+            alert('Veuillez selectionner un mode de livraison');
         }
         else {
-            alert('Veuillez vous connecter pour commander');
+            if (userLogged) {
+                let today = new Date().toDateString();
+                alert(`Veuillez régler le montant de ${totalPrice} mornilles`);
+                //Log dans l'API
+                axios.post('https://a.nacapi.com/HPEatsHistory/',
+                    {
+                        "date": today,
+                        "user_id": user.id,
+                        "total_price": totalPrice
+                    })
+                    .then(
+                        function (response) {
+                            console.log(response.status);
+                            if (response.status === 200) {
+                                alert('Votre commande à bien été enregistrée')
+                            }
+                        }
+                    )
+                    .catch(
+                        function (error) {
+                            console.log(error);
+                        }
+                    );
+            }
+            else {
+                alert('Veuillez vous connecter pour commander');
+            }
         }
     }
 
@@ -44,8 +71,9 @@ const Cart = (props) => {
         <div>
             <div className="LogoDiv">
                 <Link to="/"><Logo /></Link>
+                <h2 className="CartTitle">Panier</h2>
+                <Link to="/user"> <LogoUser user={user} /> </Link>
             </div>
-            <h2 className="CartTitle">Panier</h2>
             <CardList
                 cart={cartItems}
                 addToCart={addToCart}
@@ -58,8 +86,9 @@ const Cart = (props) => {
             <Carousel animalCard={animalCards} totalWeight={totalWeight} updatePrice={setShippinPrice} />
             <div className='CartCheckOut' >
                 <p>Montant à payer : <span className="">{totalPrice}</span> <i className="fab fa-d-and-d fa-2x MoneyIcon"></i></p>
-                <div className='CartValidationBtn' onClick={validCart}>Valider le panier</div>
+                <div className={totalPrice === 0 ? 'CartUnvalidBtn' : 'CartValidationBtn'} onClick={validCart}>Valider le panier</div>
             </div>
+            <AdBox />
         </div>
     )
 }

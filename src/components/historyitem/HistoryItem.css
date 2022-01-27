@@ -1,0 +1,38 @@
+.HistoryItem{
+    width: 80%;
+    margin : 0 auto;
+}
+
+.HistoryTitle{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.UserHistoryTable{
+    width: 40%;
+    margin: 10px auto;
+}
+
+.HistoryDate{
+    width: 40%;
+}
+
+.UserHistoryTable tr{
+    text-align: center;
+}
+
+.HistoryPrice{
+    text-align: right;
+}
+
+@media screen and (max-width: 426px) {
+    .UserHistoryTable{
+        width: 80%;
+    }
+
+    .HistoryTitle{
+        font-size: 1.3rem;
+    }
+}
