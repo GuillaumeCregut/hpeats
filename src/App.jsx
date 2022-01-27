@@ -5,7 +5,9 @@ import { useState } from "react";
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import UserPage from './pages/UserPage';
+import ContactPage from './pages/ContactPage';
 import './App.css';
+import LogoFormulaireDeContact from './assets/img/LogoFormulaireDeContact.png';
 import MealDetails from "./components/meals/MealDetails";
 
 
@@ -82,6 +84,7 @@ function App() {
         />
         
         <Route path="mealInfos/:id" element={<MealDetails addToCart={addToCart} />} />
+        <Route path="/contact" element={<ContactPage logo={LogoFormulaireDeContact} title="FormulaireDeContact" />} />
       </Routes>
 
 
