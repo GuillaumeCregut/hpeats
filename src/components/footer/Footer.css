@@ -44,12 +44,10 @@
 }
 
 .title_social {
-    font-family: url(../../assets/img/fonts/HARRP___.TTF);
+    font-family: 'harrpotter';
     margin-bottom: none;
 }
-.title-footer{
-    
-}
+
 .title_form{
     margin-bottom: 1%;
 }
