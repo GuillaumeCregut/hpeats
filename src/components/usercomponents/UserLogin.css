@@ -244,6 +244,7 @@
         width: 30%;
         transform: translateX(-110%);
         font-size: 1rem;
+		height: 420px;
     }
     .UserLoginForm {
         width: 300px;
