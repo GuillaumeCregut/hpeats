@@ -6,6 +6,7 @@
     width: 80%;
     margin : 20px auto;
     transform: translateX(-15%);
+	height: 550px;
 }
 .UserLoginContainer{
     position:absolute;
