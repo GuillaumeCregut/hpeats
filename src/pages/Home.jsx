@@ -11,15 +11,17 @@ const Home = ({ addToCart, user, cart }) => {
     const changeFilter = (newFilter) => {
         setTrigger('');
         if (filterKind === newFilter) {
-            setFilterKind('')
+            setFilterKind('');
+            
         } else {
-            setFilterKind(newFilter)
+            setFilterKind(newFilter);
         }
+        console.log(filterKind);
     }
 
     return (
         <div className='home'>
-            <MenuFilters changeFilter={changeFilter} user={user} cart={cart} />
+            <MenuFilters changeFilter={changeFilter} user={user} cart={cart} filterKind={filterKind}/>
             <MealCardsLists filterKind={filterKind} trigger={trigger} setTrigger={setTrigger} addToCart={addToCart} />
         </div>
     )
