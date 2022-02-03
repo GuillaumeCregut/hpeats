@@ -1,8 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import CardIcon from './CardIcon';
 import AnimationQuote from './AnimationQuote';
-import "./MenuFilters.css" ;
+import "./MenuFilters.css";
 
 import LogoUser from '../logouser/LogoUser';
 import CartIcon from './CartIcon';
@@ -13,7 +13,7 @@ import LogoPotion from '../../assets/img/LogoPotion.png';
 import LogoEtrange from '../../assets/img/LogoEtrange.png';
 import Logo from '../Logo.jsx'
 
-function MenuFilters({ changeFilter, user, cart }) {
+function MenuFilters({ changeFilter, user, cart, filterKind }) {
 
     return (
         <div className='MenuFilters'>
@@ -22,10 +22,10 @@ function MenuFilters({ changeFilter, user, cart }) {
                     <Logo />
                 </div>
                 <div className='titleHpeat'>
-                <h1>Bienvenue à HPEats ! </h1>                   
-                </div> 
+                    <h1>Bienvenue à HPEats ! </h1>
+                </div>
                 <div className="animation-quote">
-                <AnimationQuote />
+                    <AnimationQuote />
                 </div>
                 <div className='logo-cart'>
                     <Link to="/user"> <LogoUser user={user} /> </Link>
@@ -33,11 +33,18 @@ function MenuFilters({ changeFilter, user, cart }) {
                 </div>
             </div>
             <div className='logo-menu'>
-                <CardIcon logo={LogoVegan} title="Vegan" filter={changeFilter} kind='vegan' />
-                <CardIcon logo={Logoflexi} title="Flexi" filter={changeFilter} kind='flexi' />
-                <CardIcon logo={LogoTradi} title="Tradi" filter={changeFilter} kind='tradi' />
-                <CardIcon logo={LogoPotion} title="Potion" filter={changeFilter} kind='potions' />
-                <CardIcon logo={LogoEtrange} title="Etrange" filter={changeFilter} kind='strange' />
+               
+                    <CardIcon logo={LogoVegan} title="Vegan" filter={changeFilter} kind='vegan' filterKind={filterKind} />
+                
+               
+                    <CardIcon logo={Logoflexi} title="Flexi" filter={changeFilter} kind='flexi' filterKind={filterKind} />
+               
+                    <CardIcon logo={LogoTradi} title="Tradi" filter={changeFilter} kind='tradi' filterKind={filterKind} />
+                
+                    <CardIcon logo={LogoPotion} title="Potion" filter={changeFilter} kind='potions' filterKind={filterKind} />
+               
+                    <CardIcon logo={LogoEtrange} title="Etrange" filter={changeFilter} kind='strange' filterKind={filterKind} />
+               
             </div>
         </div>
     )

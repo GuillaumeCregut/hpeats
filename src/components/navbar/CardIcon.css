@@ -21,7 +21,10 @@
     box-shadow: inset -1px 3px 8px 5px #ffffff, 4px 9px 30px 0px #000000, 0px 0px 50px 10px rgb(214 214 214 / 29%);
     
 }
-
+.CardIconContainer{
+    border-radius: 20px;
+    box-shadow: inset -1px 3px 8px 5px #ffffff, 4px 9px 30px 0px #000000, 0px 0px 50px 10px rgb(214 214 214 / 29%);
+}
 
 .CardIcon img {
     width: 100PX;

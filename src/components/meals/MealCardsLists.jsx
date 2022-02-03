@@ -18,7 +18,7 @@ const MealCardsLists = ({ filterKind, trigger, setTrigger, addToCart }) => {
     function handleTrigger(filter) {
         setTrigger(filter);
     }
-    console.log(trigger);
+    
     return (
         <div className='MealCardsList'>
             <div className='mealButtons'>
