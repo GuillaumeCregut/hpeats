@@ -37,6 +37,11 @@ padding: 50px;
   background-color: #162E25;
   color: #fff;
 }
+.MealCardBtnSel
+{
+  color: white;
+  font-weight: bold;
+}
 
 @media screen and (max-width: 426px){ 
   .mealButtons{
