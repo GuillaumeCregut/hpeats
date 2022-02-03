@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import MealCardContainer from './MealCardContainer';
 import './MealCardsLists.css'
 
-const MealCardsLists = ({ filterKind, trigger, setTrigger }) => {
+const MealCardsLists = ({ filterKind, trigger, setTrigger, addToCart }) => {
 
     const [mealsCards, setMealsCards] = useState([]);
     const url = 'https://a.nacapi.com/HPMeats';
@@ -18,16 +18,16 @@ const MealCardsLists = ({ filterKind, trigger, setTrigger }) => {
     function handleTrigger(filter) {
         setTrigger(filter);
     }
-
+    console.log(trigger);
     return (
         <div className='MealCardsList'>
             <div className='mealButtons'>
-                <button className='button' onClick={() => handleTrigger('ent')}>Entrée</button>
-                <button className='button' onClick={() => handleTrigger('plat')}>Plat</button>
-                <button className='button' onClick={() => handleTrigger('dessert')}> Dessert</button>
+                <button className={trigger === 'ent' ? 'button MealCardBtnSel' : 'button'} onClick={() => handleTrigger('ent')}>Entrée</button>
+                <button className={trigger === 'plat' ? 'button MealCardBtnSel' : 'button'} onClick={() => handleTrigger('plat')}>Plat</button>
+                <button className={trigger === 'dessert' ? 'button MealCardBtnSel' : 'button'} onClick={() => handleTrigger('dessert')}> Dessert</button>
             </div>
             <div className='cardimage-container'>
-                <MealCardContainer mealsCardFirstFilter={mealsCards.filter((item) => item.kind.includes(filterKind))} filterTypes={trigger} mealCard='mealCard' />
+                <MealCardContainer mealsCardFirstFilter={mealsCards.filter((item) => item.kind.includes(filterKind))} filterTypes={trigger} addToCart={addToCart} />
             </div>
         </div>
     );

@@ -1,0 +1,82 @@
+:root{
+    --popup-btn-click: brown;
+    --popup-back-color: #162E25;
+}
+.PopUpMeal{
+    padding: 5px 20px;
+    background-color: var(--popup-back-color);
+    border-radius: 30px;
+    color: white;
+    width: 80%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 15%;
+}
+.CloseCross{
+    text-align: right; 
+    color : white;
+}
+
+.cross{
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.PopUpTitle{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.PopUpImage{
+    width: 400px;
+    margin-right: 20px;
+}
+
+.PopUpContItem{
+    display : flex;
+}
+
+.PopUpDesc{
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+
+.PopUpPrice{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.3rem;
+}
+
+.PopUpBtn{
+    direction: rtl;
+    padding-bottom: 20px;
+}
+
+.PopUpAddBtn{
+    background-color: var(--popup-btn-click);
+    color: white;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.PopupMoneyIcon{
+    color : red;
+}
+
+@media screen and (max-width: 426px) {
+    .PopUpMeal{
+        width: 150%;
+        left: -30%;
+    }
+    .PopUpImage{
+        width: auto ;
+        height: 150px;
+    }
+    .PopUpTitle{
+        font-size: 1.5rem;
+    }
+}

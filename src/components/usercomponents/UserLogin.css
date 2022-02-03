@@ -6,6 +6,7 @@
     width: 80%;
     margin : 20px auto;
     transform: translateX(-15%);
+	height: 550px;
 }
 .UserLoginContainer{
     position:absolute;
@@ -243,6 +244,7 @@
         width: 30%;
         transform: translateX(-110%);
         font-size: 1rem;
+		height: 420px;
     }
     .UserLoginForm {
         width: 300px;
