@@ -15,10 +15,14 @@ export default function Slider({ animalCard, totalWeight, updatePrice }) {
       <Carousel breakPoints={breakPoints} >
 
         {animalCard
-          .filter((element) => parseInt(element.payload) > totalWeight)
-          .map((element, index) => (
+          .filter((element) => parseInt(element.weight) > totalWeight)
+          .map((element, index) => {
+            return(
             <AnimalCard key={index} src={element.image} alt={element.name} updatePrice={updatePrice} animalPrice={element.price} />
-          ))}
+            )
+          }
+          )
+          }
       </Carousel>
     </div>
   )

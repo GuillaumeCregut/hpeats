@@ -12,13 +12,13 @@ import AdBox from '../components/adbox/AdBox';
 const Cart = (props) => {
     /*here we call API for animals */
     const [animalCards, setAnimalCards] = useState([]);
-    const url = 'https://a.nacapi.com/HPEatsAnimals';
+    const url = 'https://api.jsonbin.io/b/62507f82d8a4cc06909e08d5';
 
     useEffect(() => {
         axios
             .get(url)
             .then((res) => res.data)
-            .then((data) => setAnimalCards(data))
+            .then((data) => setAnimalCards(data));
     }, []);
 
     /*Def local variables */
