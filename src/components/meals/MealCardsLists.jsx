@@ -7,7 +7,7 @@ import './MealCardsLists.css'
 const MealCardsLists = ({ filterKind, trigger, setTrigger, addToCart }) => {
 
     const [mealsCards, setMealsCards] = useState([]);
-    const url = 'https://a.nacapi.com/HPMeats';
+    const url = 'https://api.jsonbin.io/b/6250682bd20ace068f958f45';
     useEffect(() => {
         axios
             .get(url)
