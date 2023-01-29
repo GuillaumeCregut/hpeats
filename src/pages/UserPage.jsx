@@ -11,7 +11,8 @@ import LogoUser from '../components/logouser/LogoUser';
 
 const UserPage = ({ userLogged, setUserLogged, user, setUser, defaultUser, setIdHisto, cart }) => {
     //Récupération de la liste des utilisateurs
-    const url = 'https://a.nacapi.com/HPEatsUsers';
+    const url=`${process.env.REACT_APP_API_URL}users/`;
+   // const url = 'https://a.nacapi.com/HPEatsUsers';
     const [users, setUsers] = useState([]);
     const [toggle, setToggle] = useState(false);
     const [login, setLogin] = useState('');

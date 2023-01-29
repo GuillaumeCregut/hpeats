@@ -11,8 +11,10 @@ const MealDetails = ({ addToCart, cart }) => {
     const params = useParams();
 
     useEffect(() => {
+        const url=`${process.env.REACT_APP_API_URL}meals/${params.id}`;
         axios
-            .get(`https://a.nacapi.com/HPMeats/${params.id}`)
+            //.get(`https://a.nacapi.com/HPMeats/${params.id}`)
+            .get(url)
             .then((res) => {
                 setMealInfos(res.data)
             })

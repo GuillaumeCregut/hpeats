@@ -5,7 +5,8 @@ import './UserLogged.css';
 
 const UserLogged = ({ setUserLogged, defaultUser, handleDisconnectBtn, user }) => {
     const [history, setHistory] = useState([]);
-    const url = `https://a.nacapi.com/HPEatsHistory?user_id=${user.id}`;
+    const url=`${process.env.REACT_APP_API_URL}history/?user_id=${user.id}`;
+  //  const url = `https://a.nacapi.com/HPEatsHistory?user_id=${user.id}`;
     useEffect(() => {
         //Récupérer de l'API historique
         axios.get(url)
