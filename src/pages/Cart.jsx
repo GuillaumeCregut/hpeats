@@ -42,7 +42,9 @@ const Cart = (props) => {
                 let today = new Date().toDateString();
                 alert(`Veuillez régler le montant de ${totalPrice} mornilles`);
                 //Log dans l'API
-                axios.post('https://a.nacapi.com/HPEatsHistory/',
+                const url=`${process.env.REACT_APP_API_URL}history/`;
+                axios.post(url,
+                //axios.post('https://a.nacapi.com/HPEatsHistory/',
                     {
                         "date": today,
                         "user_id": user.id,
